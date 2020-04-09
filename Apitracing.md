@@ -31,7 +31,7 @@ And if it's **64-bit**, choose the file located in
 * Locate the .trace file. If you've done everything correctly, in wine, you can usually find it in `/path/to/prefix/drive_c/users/USERNAME/Desktop`, where `/path/to/prefix` is the location of your Wine prefix and `USERNAME` is your username in the system.
 The file should have the size of at least a few hundred megabytes (or at least one hundred if the game is very simple), quite often it's a few gigabytes.
 If the size is way less than that (like a few bytes or kilobytes) and/or the game crashed during the tracing process, then it means it's is not really traceable, at least on Linux. Make sure you mention this.
-* Compress the .trace file (preferably in a common file format, something like `.tar.xz`) and share it using a *common* file sharing service like Google Drive or Mega. **Don't** use Firefox Send and other temporary file sharing services, as the links the file may expire before the person it was made for can download it.
+* Compress the .trace file (preferably in a common file format, something like `.tar.xz`) and share it using a *common* file sharing service like Google Drive or Mega. **Don't** use Firefox Send and other temporary file sharing services, as the link to the file may expire before the person it was made for can download it.
 
 ## On Windows
 If you have access to Windows, it's best that you perform the tracing on it rather than on Linux.
