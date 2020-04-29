@@ -21,23 +21,26 @@ Add the repository:
 
 |For this version: | Use this command:          
 |------------------|--------------------------------
+|Ubuntu 20.04      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 |Ubuntu 19.10      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
 |Ubuntu 19.04      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ disco main'
 |Ubuntu 18.10      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ cosmic main'
 |Ubuntu 18.04<br>Linux Mint 19.x | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-|Ubuntu 16.04<br>Linux Mint 18.x | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' 
+
+**Only for Ubuntu 18.04:**
+Add SDL2 Backports PPA (for Faudio package):
+
+    sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
 
 Update packages:
 
     sudo apt-get update
+    
+Install Wine
 
-Install Wine (Ubuntu 19.10 users use `wine-stable` instead):
-
-    sudo apt-get install --install-recommends winehq-stable
+    sudo apt-get install --install-recommends winehq-staging
 
 If you receive this error: `The following packages have unmet dependencies`, execute following command instead:
-
->sudo apt-get install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64
 
 For compatibility reasons, install these additional libraries:
 
