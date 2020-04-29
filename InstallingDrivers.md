@@ -17,9 +17,9 @@ Update to refresh packages:
 _**Warning**: Please ensure your graphics card is supported by the 430 driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
 
-Install the 430.40 driver:
+Install the 440.82 driver:
 
-    sudo apt install nvidia-driver-430 libnvidia-gl-430 libnvidia-gl-430:i386
+    sudo apt install nvidia-driver-440 libnvidia-gl-440 libnvidia-gl-440:i386
 
 Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
