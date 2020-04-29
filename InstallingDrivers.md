@@ -34,6 +34,10 @@ Enable 32 bit architecture (if you haven't already):
 
     sudo dpkg --add-architecture i386 
 
+Update to refresh packages:
+
+    sudo apt update
+
 Install support for 32-bit games:
 
     sudo apt install libgl1-mesa-dri:i386
@@ -44,7 +48,7 @@ Install support for Vulkan API (will be functional only if you have a [Vulkan ca
 
 Reboot to apply changes.
 
-**If you have Ubuntu 18.04 Bionic Beaver or Ubuntu 18.10 Cosmic Cuttlefish:**
+**If you have Ubuntu 18.04:**
 
 Add [kisak-mesa PPA](https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa): 
 
