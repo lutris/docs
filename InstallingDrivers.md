@@ -99,7 +99,7 @@ Proprietary driver and support for Vulkan are required for proper functionality 
 
 To install it, execute following command:
 
-    sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+    sudo pacman -S nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 
 ### AMD
 
