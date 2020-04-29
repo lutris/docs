@@ -2,6 +2,8 @@
 
 [Origin](https://www.origin.com) is an online gaming, digital distribution and digital rights management platform developed by Electronic Arts that allows users to purchase games for PC and mobile platforms.
 
+To install Origin, you can use our Lutris installer: https://lutris.net/games/origin
+
 ### Additional system dependencies required for Origin installation:
 * Arch: lib32-gnutls lib32-libldap lib32-libgpg-error lib32-libxml2 lib32-alsa-plugins lib32-sdl2 lib32-freetype2 lib32-dbus lib32-libgcrypt libgcrypt
 * Ubuntu: libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386
