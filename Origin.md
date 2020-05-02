@@ -18,17 +18,13 @@ The following is a list of issues and workarounds found when using it under Wine
 
 ### Updating Origin:
 
-Origin has a tendency to break when it requires an update so to help with this we provide [this handy script](https://github.com/DrDoctor13/wine-origin-updater) with all our Origin installers.
+Origin has a tendency to break when it requires an update. For example, you will probably see this after the client tries to update:
 
-<p align="center">
-  <img width="404" height="329" src="https://i.imgur.com/3Bvvq5x.png">
-</p>
+![Screenshot from 2020-05-02 08-22-36](https://user-images.githubusercontent.com/10602045/80855948-3f909880-8c4e-11ea-809b-58a5599fad81.png)
 
-If you see this window close your Wine instance, open a terminal, and run: `./updateorigin.sh`
+To fix this issue, simply close/stop the game from Running, and launch it again.
+Origin will try to update itself again and this time, it will succeed.
 
-The script can be found in the `drive_c/Program Files (x86)/Origin` folder.
-
-Thanks to DrDoctor13/WhatTheBuck for creating this! More detailed instructions can be found by [following this link.](https://github.com/DrDoctor13/wine-origin-updater#wine-origin-updater) 
 
 ### Origin In-Game
 
