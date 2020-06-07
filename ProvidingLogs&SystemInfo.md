@@ -103,5 +103,5 @@ Issue:
 
     Unhandled exception: unimplemented function vulkan-1.dll.vkGetInstanceProcAddr called in 32-bit code (0x7bc7d959).
 
-**Solution:** [Install Vulkan 64 **and** 32 bit libraries/loaders.](https://github.com/lutris/lutris/wiki/Installing-drivers#installing-vulkan)
+**Solution:** [Install Vulkan 64 **and** 32 bit libraries/loaders.](https://github.com/lutris/docs/blob/master/InstallingDrivers.md#installing-vulkan)
 
