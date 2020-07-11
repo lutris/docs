@@ -68,3 +68,12 @@ Origin tends to have a tough time installing some things. Here's a list of worka
   - Place `vc_redist.x64.exe` into the dotnet redist folder `__Installer/dotnet/dotnet4client/redist`
   - Rename `dotNetFx40_Client_x86_x64.exe` to `dotNetFx40_Client_x86_x64.exe.bak` and rename `vc_redist.x64.exe` to `dotNetFx40_Client_x86_x64.exe`
   - Continue with your install
+
+- If your download has been paused due to permission errors.
+  > Your download has been paused.
+  > 
+  > Origin needs to download files and is waiting for permission. Please choose "Yes" when Windows prompts you for permission.
+  - To fix this, simply re-enable IPv6 in your kernel (i.e. remove `ipv6.disable=1` from the kernel command line).
+<p align="center">
+  <img width="582" height="309" src="https://user-images.githubusercontent.com/65068529/81470778-eba52700-91ec-11ea-83cb-ed25d394800e.png">
+</p>

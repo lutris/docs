@@ -3,14 +3,14 @@
 **_Note: The game won't work correctly if it was installed on an NTFS or BTRFS partition. Please choose an Ext4 drive as destination instead._**
 
 ### Wine dependencies
-Wine dependencies are **required** for Overwatch to work. Please follow the instructions on [Wine Dependencies](https://github.com/lutris/lutris/wiki/Wine-Dependencies) page to get them.
+Wine dependencies are **required** for Overwatch to work. Please follow the instructions on [Wine Dependencies](https://github.com/lutris/docs/blob/master/WineDependencies.md) page to get them.
 
 ### DXVK dependencies
-As the installer uses DXVK by default, please follow the instructions on this page: [How to: DXVK](https://github.com/lutris/lutris/wiki/How-to:-DXVK).<br>
+As the installer uses DXVK by default, please follow the instructions on this page: [How to: DXVK](https://github.com/lutris/docs/blob/master/HowToDXVK.md).<br>
 Otherwise, the game **will not work**.
 
 ## Battle.Net
-Blizzard Battle.Net will be installed when you run the Lutris Installer for Overwatch.<br> To make it work properly, make sure you follow to instructions on: [Blizzard App](https://github.com/lutris/lutris/wiki/Game:-Blizzard-App) page before attempting to install Overwatch.
+Blizzard Battle.Net will be installed when you run the Lutris Installer for Overwatch.<br> To make it work properly, make sure you follow to instructions on: [Blizzard App](https://github.com/lutris/docs/blob/master/Battle.Net.md) page before attempting to install Overwatch.
 
 ## Known unresolved issues
 
