@@ -2,7 +2,7 @@
 Test for yourself!! Some installers use some of the tweaks. You should always test what works best for your own system.
 
 ## Enable DXVK
-DX11 translated into Vulkan, see [How to: DXVK](https://github.com/lutris/lutris/wiki/How-to:-DXVK).
+DX11 translated into Vulkan, see [How to: DXVK](https://github.com/lutris/docs/blob/master/HowToDXVK.md).
 
 ## Enable Game Mode
 Game Mode set your CPU governor to max performance while you are playing, and can improve FPS in some cases. It's automatically enabled for all your games when you have game mode installed on your system. The only thing to have in consideration is that you must install gamemode, and lib32-gamemode. If you can't install this libraries, make sure your operating system has multiarch (ubuntu) or multilib (arch linux) enabled. You need Lutris 0.4.23 or upper. More information available [here](https://github.com/FeralInteractive/gamemode).
