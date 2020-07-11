@@ -7,16 +7,16 @@ For the current status of the project, please refer to the DXVK [wiki](https://g
 ## Requirements:
 
 - Wine >= 3.10
-- [Wine dependencies](https://github.com/lutris/lutris/wiki/Wine-Dependencies) - Wine Staging is recommended
+- [Wine dependencies](https://github.com/lutris/docs/blob/master/WineDependencies.md) - Wine Staging is recommended
 - [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility) - Note for Intel iGPU users: Only Skylake, Kaby Lake, and Coffee Lake offer full Vulkan support. Anything older is only partial. Although some games might work nothing is guaranteed.
 - [Driver supported by DXVK.](https://github.com/doitsujin/dxvk/wiki/Driver-support)
-- [Vulkan loader, **both** 64-bit and 32-bit.](https://github.com/lutris/lutris/wiki/Installing-drivers#installing-vulkan)
+- [Vulkan loader, **both** 64-bit and 32-bit.](https://github.com/lutris/docs/blob/master/InstallingDrivers.md)
 
 ## Installing Supported drivers:
 
 To take advantage of DXVK and it's improved performance you ***must*** install a supported graphics driver and Vulkan dependencies.
 
-**To learn how to do that, follow our guide here: _[Installing Drivers](https://github.com/lutris/lutris/wiki/Installing-drivers)_**
+**To learn how to do that, follow our guide here: _[Installing Drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md)_**
 
 ## D9VK and Custom DXVK
 
