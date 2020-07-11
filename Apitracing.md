@@ -41,6 +41,7 @@ To do that on Windows, right-click on the executable file you want to check, sel
 If the first Windows version in the list is "Windows Vista", then it means the game is **64-bit**.
  
 If you see older Windows versions in that menu, like "Windows 98", then the game is **32-bit**.
+
 ![](https://cdn.discordapp.com/attachments/545938151739228191/604369144892358667/compatibility-check.png)
 * Download prebuilt apitrace files: https://people.freedesktop.org/~jrfonseca/apitrace/apitrace-msvc-latest.7z
 * Extract the archive. 
