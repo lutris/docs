@@ -5,7 +5,7 @@ World of Warcraft works great in Linux. DX9 / OpenGL renderer for WoW are gone, 
 World of Warcraft is installed and updated by Blizzard App. It is advised to install World of Warcraft game data outside of the Wine Prefix, so that when you want to make a fresh install of the prefix, you can just delete and recreate without losing the game data.
 
 ### **IMPORTANT:** Dependencies need to be installed first
-The installer for WoW actually installs Blizzard app. Make sure you have the dependencies listed on the page there installed: [Blizzard App](https://github.com/lutris/lutris/wiki/Game:-Blizzard-App). If you do not do this, you will not be able to install World of Warcraft.
+The installer for WoW actually installs Blizzard app. Make sure you have the dependencies listed on the page there installed: [Blizzard App](https://github.com/lutris/docs/blob/master/Battle.Net.md). If you do not do this, you will not be able to install World of Warcraft.
 
 ## Config.wtf Tweaks
 The following tweaks should be set in Config.wtf by hand. Some of them can be set with ```/console Option <value>```
