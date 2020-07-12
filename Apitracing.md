@@ -16,7 +16,14 @@ And if it's **64-bit**, you will get this instead:
 * Open `winecfg` and add a `native,builtin` override for `d3d9`, `d3d11` and `dxgi.dll`. Here's a GIF that showcases the process:
 
 ![Peek 2020-04-09 17-32](https://user-images.githubusercontent.com/10602045/78906537-29951b00-7a88-11ea-8142-3681f1ba8af0.gif)
-* Download prebuilt apitrace files: https://people.freedesktop.org/~jrfonseca/apitrace/apitrace-msvc-latest.7z
+* Download prebuilt apitrace files:
+
+If the game is **32-bit**
+>https://ci.appveyor.com/api/projects/jrfonseca/apitrace/artifacts/build/apitrace-latest-win32.7z?branch=master&job=msvc32
+
+And if it's **64-bit**
+>https://ci.appveyor.com/api/projects/jrfonseca/apitrace/artifacts/build/apitrace-latest-win64.7z?branch=master&job=msvc64
+
 * Extract the archive. 
 * Now you have to copy the appropriate `d3d9.dll`, `d3d11.dll`, `dxgi.dll` and `dxgitrace.dll` files.
 
@@ -43,7 +50,14 @@ If the first Windows version in the list is "Windows Vista", then it means the g
 If you see older Windows versions in that menu, like "Windows 98", then the game is **32-bit**.
 
 ![](https://cdn.discordapp.com/attachments/545938151739228191/604369144892358667/compatibility-check.png)
-* Download prebuilt apitrace files: https://people.freedesktop.org/~jrfonseca/apitrace/apitrace-msvc-latest.7z
+* Download prebuilt apitrace files:
+
+If the game is **32-bit**
+>https://ci.appveyor.com/api/projects/jrfonseca/apitrace/artifacts/build/apitrace-latest-win32.7z?branch=master&job=msvc32
+
+And if it's **64-bit**
+>https://ci.appveyor.com/api/projects/jrfonseca/apitrace/artifacts/build/apitrace-latest-win64.7z?branch=master&job=msvc64
+
 * Extract the archive. 
 * Now you have to copy the appropriate `d3d9.dll`, `d3d11.dll`, `dxgi.dll` and `dxgitrace.dll` files.
 
