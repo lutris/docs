@@ -22,5 +22,6 @@ Go to winetricks and install Arial font
 ## Cursor reset to center after click
 to game chat write `/console rawMouseEnable 1`, if rotate is block by screen, set `Lock Cursor to Window` (Interface -> Mouse)
 
-## Some graphics problems (DXVK)
+## DX12 - bad rendering (DXVK)
+![image](https://user-images.githubusercontent.com/13171542/87695631-ff8e7b80-c78f-11ea-8994-761fe0ef448f.png)
 run game with additional command line argument `-d3d11`
