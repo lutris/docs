@@ -120,3 +120,78 @@ _Note: Only Skylake, Kaby Lake, and Coffee Lake offer full Vulkan support. Broad
 To install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility) and driver), execute following command:
 
     sudo dnf install vulkan-loader vulkan-loader.i686
+
+    
+## openSUSE Tumbleweed/Leap
+
+First of all enabling multiarch or 32bit support is not required here it should not be disbaled in the first place.
+
+### AMD
+
+Usually if you run an AMD GPU with open source drivers the required packages should already be installed in case they don't run the following command:
+
+    sudo zypper in kernel-firmware-amdgpu libdrm_amdgpu1 libdrm_amdgpu1-32bit libdrm_radeon1 libdrm_radeon1-32bit
+    
+For Vulkan support for the open source AMD drivers run:
+
+    sudo zypper in libvulkan_radeon libvulkan_radeon-32bit libvulkan1 libvulkan1-32bit vulkan-tools vulkan-validationlayers
+    
+### Intel
+
+Same as for the AMD drivers intel drivers should be already present if you have an Intel GPU in your system if they don't ensure they are by running:
+
+    sudo zypper in kernel-firmware-intel libdrm_intel1 libdrm_intel1-32bit
+    
+For Vulkan support also run:
+    
+    sudo zypper in libvulkan1 libvulkan1-32bit vulkan-tools vulkan-validationlayers libvulkan_intel libvulkan_intel-32bit
+    
+### NVidia
+
+The closed source NVidia dirver is not enabled and available by default please check which NVidia GPU you have and run one of the following One-Click Installers.
+
+Those will then add the required official NVidia driver repository from https://download.nvidia.com/opensuse/ and install the required nvidia driver package.
+
+#### Geforce 600 series and later
+
+[Supported products](https://www.nvidia.com/Download/driverResults.aspx/162107/en-us)
+
+Supported versions:
+
+    - openSUSE Leap 15.2
+    - openSUSE Leap 15.1
+    - openSUSE Leap 15.0
+    - openSUSE Leap 42.3
+    - openSUSE Tumbleweed
+
+[One Click Installer](https://opensuse-community.org/nvidia_G05.ymp)
+
+#### Geforce 400 series and later
+
+[Supported producs](https://www.nvidia.com/Download/driverResults.aspx/142567/en-us)
+
+Supported versions:
+
+    - openSUSE Leap 15.2
+    - openSUSE Leap 15.1
+    - openSUSE Leap 15.0
+    - openSUSE Leap 42.3
+    - openSUSE Tumbleweed
+
+[One Click Installer](https://opensuse-community.org/nvidia_G04.ymp)
+
+#### One click for GeForce 8xxx and later.
+
+[Supported products](https://www.nvidia.com/Download/driverResults.aspx/135161/en-us)
+
+Supported versions:
+
+    - openSUSE Leap 15.1
+    - openSUSE Leap 15.0
+    - openSUSE Leap 42.3
+
+[One Click Installer](https://opensuse-community.org/nvidia_G03.ymp)
+
+For Vulkan support on NVidia drivers also run:
+
+    sudo zypper in libvulkan1 libvulkan1-32bit vulkan-tools vulkan-validationlayers
