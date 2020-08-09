@@ -124,7 +124,7 @@ To install support for Vulkan API (will be functional only if you have a [Vulkan
     
 ## openSUSE Tumbleweed
 
-First of all enabling multiarch or 32bit support is not required here it should not be disbaled in the first place.
+*Notice:* openSUSE Leap releases are currently not officaly supported because they ship an older version of glibc (2.26 but 2.27 is required at least).
 
 ### AMD
 
