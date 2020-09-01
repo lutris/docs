@@ -52,7 +52,7 @@ Open `drive_c/users/$USER/My Documents/Overwatch/Settings/Settings_v0.ini` and a
 GPUDeviceID = "22806"
 GPUName = "Intel(R) HD Graphics 620"
 GPUScaler = "70.000000"
-GPUVenderID = "32902"
+GPUVendorID = "32902"
 ```
 
 - On Vega cards, the hair on characters may appear broken. [Example](https://i.imgur.com/RmWCuCs.jpg). This is caused by an issue in LLVM 7.0. Simply update to `mesa-git` and LLVM 8.0.
