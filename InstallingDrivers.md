@@ -1,5 +1,5 @@
 ﻿
-## Ubuntu / Linux Mint / Other Ubuntu-based distributions:
+## Ubuntu
 
 ### Nvidia:
 
@@ -15,12 +15,12 @@ Update to refresh packages:
 
     sudo apt update
 
-_**Warning**: Please ensure your graphics card is supported by the 430 driver before installing._
-_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
+_**Warning**: Please ensure your graphics card is supported by the 450 driver before installing._
+_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/163238/en-us
 
-Install the 440.82 driver:
+Install the 450 driver:
 
-    sudo apt install nvidia-driver-440 libnvidia-gl-440 libnvidia-gl-440:i386
+    sudo apt install nvidia-driver-450
 
 Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
@@ -29,27 +29,6 @@ Install support for Vulkan API (will be functional only if you have a [Vulkan ca
 Reboot to apply changes.
 
 ### AMD / Intel:
-
-**If you have Ubuntu 19.10 or newer:**
-Enable 32 bit architecture (if you haven't already):
-
-    sudo dpkg --add-architecture i386 
-
-Update to refresh packages:
-
-    sudo apt update
-
-Install support for 32-bit games:
-
-    sudo apt install libgl1-mesa-dri:i386
-
-Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):    
-
-    sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:i386
-
-Reboot to apply changes.
-
-**If you have Ubuntu 18.04:**
 
 Add [kisak-mesa PPA](https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa): 
 
@@ -65,7 +44,7 @@ Upgrade your system:
 
 Install support for 32-bit games:
 
-    sudo apt install libgl1-mesa-glx:i386 libgl1-mesa-dri:i386
+    sudo apt install libgl1-mesa-dri:i386
 
 Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):    
 
