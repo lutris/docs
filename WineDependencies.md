@@ -75,6 +75,16 @@ Disclaimer: this may seem like a lot of libraries to install, but in order for g
 Execute following command:
 
     sudo eopkg install wine wine-devel wine-32bit-devel winetricks
+    
+## Fedora
+
+Execute following command:
+
+    sudo dnf install wine
+    
+For a more minimal experience:
+
+    sudo dnf install wine-core wine-core.i686
 
 ## Other distributions
 
