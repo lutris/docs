@@ -78,6 +78,8 @@ Execute following command:
     
 ## Fedora
 
+>Fedora offers two `wine` packages, both of which are versions of `wine-staging`. While `staging` is usually recommended for gaming and Lutris, other versions can be retrieved from [WineHQ Download](https://wiki.winehq.org/Download). The `wine` package will install *all* dependencies, which may be easier for less advanced users, but also includes some applications and libraries you will probably never use. The `wine-core` package ships with a more minimal installation of wine, but may require certain dependencies to be installed later on an app by app basis.
+
 Execute following command:
 
     sudo dnf install wine
