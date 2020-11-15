@@ -1,4 +1,5 @@
-## Ubuntu / Linux Mint / Other Ubuntu-based distributions:
+﻿
+## Ubuntu
 
 ### Nvidia:
 
@@ -14,12 +15,12 @@ Update to refresh packages:
 
     sudo apt update
 
-_**Warning**: Please ensure your graphics card is supported by the 430 driver before installing._
-_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
+_**Warning**: Please ensure your graphics card is supported by the 450 driver before installing._
+_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/163238/en-us
 
-Install the 440.82 driver:
+Install the 450 driver:
 
-    sudo apt install nvidia-driver-440 libnvidia-gl-440 libnvidia-gl-440:i386
+    sudo apt install nvidia-driver-450
 
 Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
@@ -28,27 +29,6 @@ Install support for Vulkan API (will be functional only if you have a [Vulkan ca
 Reboot to apply changes.
 
 ### AMD / Intel:
-
-**If you have Ubuntu 19.10 or newer:**
-Enable 32 bit architecture (if you haven't already):
-
-    sudo dpkg --add-architecture i386 
-
-Update to refresh packages:
-
-    sudo apt update
-
-Install support for 32-bit games:
-
-    sudo apt install libgl1-mesa-dri:i386
-
-Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):    
-
-    sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:i386
-
-Reboot to apply changes.
-
-**If you have Ubuntu 18.04:**
 
 Add [kisak-mesa PPA](https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa): 
 
@@ -64,7 +44,7 @@ Upgrade your system:
 
 Install support for 32-bit games:
 
-    sudo apt install libgl1-mesa-glx:i386 libgl1-mesa-dri:i386
+    sudo apt install libgl1-mesa-dri:i386
 
 Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):    
 
@@ -116,11 +96,11 @@ To install support for Vulkan API  (will be functional only if you have a [Vulka
 _Note: Only Skylake, Kaby Lake, and Coffee Lake offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which may not work with a lot of games. Sandy Bridge and older lack any Vulkan support whatsoever._
 
 ## Fedora (Incomplete Guide)
+*Note: Dnf will pull most, if not all, AMD/Intel drivers with an install of Lutris, Wine, and/or Steam. Unless on an NVIDIA card, the following guide may be redundant.*
 
 To install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility) and driver), execute following command:
 
     sudo dnf install vulkan-loader vulkan-loader.i686
-
     
 ## openSUSE Tumbleweed
 
@@ -163,3 +143,28 @@ Those will then add the required official NVidia driver repository from https://
 For Vulkan support on NVidia drivers also run:
 
     sudo zypper in libvulkan1 libvulkan1-32bit
+=======
+### Nvidia:
+
+_**Warning**: Please ensure your graphics card is supported by modern Nvidia driver before installing._
+_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
+
+Proprietary driver and support for Vulkan are required for proper functionality of games.
+
+First, update (and reboot) your system:
+
+    sudo dnf update
+    reboot
+Next, make sure the official repos are installed:
+
+    sudo dnf install fedora-workstation-repositories
+Enable the NVIDIA driver repo:
+
+    sudo dnf config-manager --set-enabled rpmfusion-nonfree-nvidia-driver
+Reboot again.
+After the reboot, verify the addition of the repository via the following command:
+
+    sudo dnf repository-packages rpmfusion-nonfree-nvidia-driver info
+If several NVIDIA drivers are loaded, you are good to go. Finally, login, connect to the internet, and open the software app. Click _Add-ons> Hardware Drivers> NVIDIA Linux Graphics Driver> Install._
+
+If you’re using an older GPU or plan to use multiple GPUs, check  [the RPMFusion guide](https://rpmfusion.org/Howto/NVIDIA?highlight=%28CategoryHowto%29)  for further instructions. Finally, to ensure a successful reboot, set “WaylandEnable=false” in  _/etc/gdm/custom.conf_, and make sure to avoid using secure boot.
