@@ -126,3 +126,25 @@ After the reboot, verify the addition of the repository via the following comman
 If several NVIDIA drivers are loaded, you are good to go. Finally, login, connect to the internet, and open the software app. Click _Add-ons> Hardware Drivers> NVIDIA Linux Graphics Driver> Install._
 
 If you’re using an older GPU or plan to use multiple GPUs, check  [the RPMFusion guide](https://rpmfusion.org/Howto/NVIDIA?highlight=%28CategoryHowto%29)  for further instructions. Finally, to ensure a successful reboot, set “WaylandEnable=false” in  _/etc/gdm/custom.conf_, and make sure to avoid using secure boot.
+
+## Void (Incomplete Guide)
+
+Make sure you have the correct drivers for your system installed. 
+
+Enable the void multilib and multilib-nonfree repositories with:
+```
+# xbps-install void-repo-multilib{,-nonfree}
+```
+
+You can then upgrade the system and repositories with:
+```
+# xbps-install -Syu
+```
+
+### Nvidia
+
+To install required libraries for lutris on void issue:
+```
+# xbps-install -S nvidia-libs-32bit vulkan-loader vulkan-loader-32bit Vulkan-Tools
+```
+Installing the nvidia drivers should already install nvidia-libs so you shouldnt need to manually install it
