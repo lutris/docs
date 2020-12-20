@@ -21,6 +21,7 @@ Add the repository:
 
 |For this version: | Use this command:          
 |------------------|--------------------------------
+|Ubuntu 20.10      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ groovy main'
 |Ubuntu 20.04      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 |Ubuntu 19.10      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
 |Ubuntu 19.04      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ disco main'
