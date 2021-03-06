@@ -29,6 +29,8 @@ Bugs, misconfigured systems and missing dependencies can sometimes cause issues 
 Usually it's caused by missing wine dependencies, but sometimes it's a result of an unknown bug in KDE.
 There are no known workarounds to this, so the only solution is to use another DE.
 
+If you are behind a proxy, or behind a DNS Filter like PiHole, and your installation stalls with an "Object moved" error, whitelist `*.blizzard.com` and `*.battle.net` to allow agent installation. There is built-in telemetry that can cause the installation to fail, even with all the correct system dependecies.
+
 ### The installer freezes at ~25% and then returns an error
 This is caused by broken or missing installation of 32-bit `nvidia-utils` (or `mesa`). 
 
