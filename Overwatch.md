@@ -1,6 +1,6 @@
 # Overwatch on Linux (Wine)
 
-**_Note: The game won't work correctly if it was installed on an NTFS partition. Please choose an Ext4 or BTRFS drive as destination instead._**
+**_Note: The game won't work correctly if it was installed on an NTFS partition._**
 
 ### Wine dependencies
 Wine dependencies are **required** for Overwatch to work. Please follow the instructions on [Wine Dependencies](https://github.com/lutris/docs/blob/master/WineDependencies.md) page to get them.
