@@ -106,7 +106,7 @@ To install support for Vulkan API (will be functional only if you have a [Vulkan
 
 ### NVIDIA:
 
-_**Warning**: Please ensure your graphics card is supported by modern NVIDIA driver before installing._
+_**Warning**: Please ensure your graphics card is supported by a modern NVIDIA driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
 
 A proprietary driver and support for Vulkan are required for games to function properly.  
