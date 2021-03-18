@@ -1,9 +1,9 @@
 ﻿
 ## Ubuntu
 
-### Nvidia:
+### NVIDIA:
 
-To get the latest Nvidia drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa):
+To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa):
 
     sudo add-apt-repository ppa:graphics-drivers/ppa
 
@@ -59,9 +59,7 @@ _Note for Intel integrated graphics users: Only Skylake, Kaby Lake, and Coffee L
 
 ## Arch / Manjaro / Other Arch derivatives:
 
-First, enable multilib.
-
-To enable multilib repository, uncomment the `[multilib]` section in `/etc/pacman.conf`
+First, enable the multilib repository by uncommenting the `[multilib]` section in `/etc/pacman.conf`
 
 <pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/pacman.conf
 --------------------------------------------------------------------------------------
@@ -70,16 +68,20 @@ Include = /etc/pacman.d/mirrorlist</pre>
 
 Then upgrade the system `sudo pacman -Syu`.
 
-### Nvidia:
+### NVIDIA:
 
-_**Warning**: Please ensure your graphics card is supported by modern Nvidia driver before installing._
+_**Warning**: Please ensure your graphics card is supported by a modern NVIDIA driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
 
-Proprietary driver and support for Vulkan are required for proper functionality of games.
+A proprietary driver and support for Vulkan are required for games to function properly. To install the driver package, run:
 
-To install it, execute following command:
+* `sudo pacman -S nvidia` if you are using the `linux` kernel package.
+* `sudo pacman -S nvidia-lts` if you are using the `linux-lts` kernel package.
+* `sudo pacman -S nvidia-dkms` if you are using a custom kernel package.
 
-    sudo pacman -S nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+Then install the other necessary packages by running this command:
+
+    sudo pacman -S nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 
 ### AMD
 
@@ -95,19 +97,19 @@ To install support for Vulkan API  (will be functional only if you have a [Vulka
 
 _Note: Only Skylake, Kaby Lake, and Coffee Lake offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which may not work with a lot of games. Sandy Bridge and older lack any Vulkan support whatsoever._
 
-## Fedora (Incomplete Guide)
+## Fedora (incomplete guide)
 *Note: Dnf will pull most, if not all, AMD/Intel drivers with an install of Lutris, Wine, and/or Steam. Unless on an NVIDIA card, the following guide may be redundant.*
 
 To install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility) and driver), execute following command:
 
     sudo dnf install vulkan-loader vulkan-loader.i686
 
-### Nvidia:
+### NVIDIA:
 
-_**Warning**: Please ensure your graphics card is supported by modern Nvidia driver before installing._
+_**Warning**: Please ensure your graphics card is supported by modern NVIDIA driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
 
-Proprietary driver and support for Vulkan are required for proper functionality of games.
+A proprietary driver and support for Vulkan are required for games to function properly.  
 
 First, update (and reboot) your system:
 
