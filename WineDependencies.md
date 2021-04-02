@@ -6,7 +6,7 @@ The version of Wine installed should not matter, it is not even required for Win
 
 Below are a list of commands specific to your distribution. Please, follow them before asking for support.
 
-## Ubuntu/Linux Mint/Ubuntu derivatives
+## Ubuntu/Linux Mint/Debian derivatives
 
 Enable 32 bit architecture (if you haven't already): 
 
