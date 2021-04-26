@@ -6,7 +6,7 @@ The version of Wine installed should not matter, it is not even required for Win
 
 Below are a list of commands specific to your distribution. Please, follow them before asking for support.
 
-## Ubuntu/Linux Mint/Ubuntu derivatives
+## Ubuntu/Debian/Linux Mint/Ubuntu derivatives/Debian derivatives
 
 Enable 32 bit architecture (if you haven't already): 
 
@@ -27,6 +27,8 @@ Add the repository:
 |Ubuntu 19.04      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ disco main'
 |Ubuntu 18.10      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ cosmic main'
 |Ubuntu 18.04<br>Linux Mint 19.x | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+|Debian 10 Buster  | sudo apt install software-properties-common<br>sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
+|Debian 11 Bullseye| sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ bullseye main'
 
 **Only for Ubuntu 18.04:**
 Add SDL2 Backports PPA (for Faudio package):
