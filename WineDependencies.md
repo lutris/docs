@@ -6,7 +6,7 @@ The version of Wine installed should not matter, it is not even required for Win
 
 Below are a list of commands specific to your distribution. Please, follow them before asking for support.
 
-## Ubuntu/Linux Mint/Ubuntu derivatives
+## Ubuntu/Debian/Linux Mint/Ubuntu derivatives/Debian derivatives
 
 Enable 32 bit architecture (if you haven't already): 
 
@@ -21,6 +21,9 @@ Add the repository:
 
 |For this version: | Use this command:          
 |------------------|--------------------------------
+|Debian 9 Jessie   | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ jessie main'
+|Debian 10 Buster  | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
+|Debian 11 Bullseye| sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ bullseye main'
 |Ubuntu 20.10      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ groovy main'
 |Ubuntu 20.04      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 |Ubuntu 19.10      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
