@@ -15,12 +15,12 @@ Update to refresh packages:
 
     sudo apt update
 
-_**Warning**: Please ensure your graphics card is supported by the 450 driver before installing._
+_**Warning**: Please ensure your graphics card is supported by the 465 driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/163238/en-us
 
-Install the 450 driver:
+Install the 465 driver:
 
-    sudo apt install nvidia-driver-450
+    sudo apt install nvidia-driver-465
 
 Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
