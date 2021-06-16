@@ -17,7 +17,7 @@ Otherwise, Battle.Net **may not work**.
 These dependencies may already be installed on your system, but it won't hurt to ensure you have them.
 * Ubuntu: `libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libsqlite3-0:i386`
 * Arch: `lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse`
-* Fedora: `freetype freetype.i686 gnutls gnutls.i686 gnutls-devel gnutls-devel.i686 openldap openldap.i686 openldap-devel openldap-devel.i686 libgpg-error libgpg-error.i686  sqlite2.i686 sqlite2.x86_64` (Both i686 and x86_64 versions)
+* Fedora: `freetype.i686 gnutls.i686 openldap.i686 libgpg-error.i686 sqlite2.i686 pulseaudio-libs.i686`
 * Solus: `libgnutls libgnutls-devel libgnutls-32bit libgnutls-32bit-devel openldap-devel openldap-32bit-devel libgpg-error-devel libgpg-error-32bit libgpg-error-32bit-devel sqlite3 sqlite3-32bit`
 * OpenSuse: `libgnutls.so.30 libgnutls-devel libgnutls.so.28 libldap libgpg-error libvulkan_radeon-32bit` (Or libgpg-error.so.0)
 * Gentoo: `gnutls libgpg-error sqlite app-crypt/p11-kit sys-libs/readline libusb`, all with `abi_x86_32` enabled
