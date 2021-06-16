@@ -78,6 +78,8 @@ Then, inside the prefix Battle.Net is installed in, find `drive_c/ProgramData` f
 
 To restore your existing game installations  after this, simply open Settings>Game Install/Update and click "Scan for Games".
 
+If you're using an AMD GPU, try setting `radeon_icd.x86_64.json` in Lutris System preferences -> System options -> Vulkan ICD loader. Make sure to tick "Show advanced options".
+
 ### It simply won't start
 Try to change executable from `Battle.net Launcher.exe` to `Battle.net.exe`, and try again.
 
