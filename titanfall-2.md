@@ -6,12 +6,10 @@
 
 - Running the game in windowed mode with v-sync options enabled will result in a non playable framerate, even in menus. To fix this, run the game in fullscreen, or disable v-sync which will cause the game to tear.
 
-- The game will fail to launch if the Origin in game overlay is enabled, simply disable the overlay. Please note that the invite friends functionality in game will not work anymore. You will still be able to accept network invites and join other friends lobbies, but you will not be able to open your own.
+- The game will fail to launch if the Origin in game overlay is enabled, simply disable the overlay. Please note that the invite friends functionality in game will not work anymore. You will still be able to accept and create network invites and join other friends lobbies, but to open your own lobby you will need to first open a private macth lobby (You don't need to start the private match). Once you are in the private match lobby, you can invite your friends and they can join you via Origin. After at least one person joined you can also go back to the normal multiplayer lobby. Your friends will still remain in your party.
 
 - If the game immediately minimizes when launched, add `-noborder` to your Origin launch arguments for Titanfall 2.
 
 ## Unresolved issues
-
-- Since the game does not launch with Origin in game overlay enabled, you will not be able to invite friends to your lobby. You are still able to join other open lobbies by clicking on join game in the Origin client itself. You can still create in game lobbies by creating a network invite that your friends will be able to join. However, the party will disband if you cancel the queue. Your lobby will be shown as open during the network invite joinable time period, however, friends will be unable to join via Origin friends list.
 
 - The game will tear in windowed mode and in game v-sync options will cause the game to run at an unplayable framerate. Use fullscreen with `-noborder` as a workaround.
