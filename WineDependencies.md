@@ -44,6 +44,8 @@ Install Wine
 
 If you receive this error: `The following packages have unmet dependencies`, execute following command instead:
 
+    sudo apt-get install --install-recommends winehq-staging wine-staging wine-staging-i386 wine-staging-amd64
+
 For compatibility reasons, install these additional libraries:
 
 ```
