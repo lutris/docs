@@ -6,9 +6,13 @@ You can find the sources for these builds here: [https://github.com/lutris/wine]
 
 ### lutris
 Prepared and built by [Tannis Root](https://github.com/tannisroot?tab=repositories) under Ubuntu 18.04.
-Includes a lot of patches and improvements from Proton, including fshack, esync, faudio, clock monotonic patchset, _rawinput patchset, fsync_ and other patches that were present in `tkg` and `ge-protonified` builds. Depending on Wine version, it also occasionally fixes regressions that were introduced Wine release `lutris` build is based against.
-Patchnotes for these releases are available in Lutris' Discord server, in the #news channel. But there are plans to distribute them through other ways.
+Includes a lot of patches and improvements from Proton, including esync, clock monotonic patchset, fsync_ and other various patches. Depending on Wine version, it also occasionally fixes regressions that were introduced in the Wine version the `lutris` build is based on.
+Patchnotes for these releases are available on [lutris/wine release page](https://github.com/lutris/wine/releases).
 
+### lutris-fshack
+Same as `lutris`, but includes **fshack**, a software implementation of monitor modesetting (resolution changing), ported over from Proton. With it, your whole monitor will no longer modeset to a lower resolution if the game requests it, instead Wine itself will do it and only do it for the game itself.
+It may also improve fullscreen behavior for games that run in your native resolution, but results may way from game to game.
+Additionally, due to fshack being quite big and modifying a lot of components, some fixes and patches that are used in normal `lutris` aren't compatible with it and thus missing.
 
 ## Deprecated builds
 
