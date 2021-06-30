@@ -9,8 +9,9 @@ Battle.Net is the game launcher for Blizzard and Activision games.<br>
 ### Wine dependencies
 Wine dependencies are **required** for Overwatch to work. Please follow the instructions on [Wine Dependencies](https://github.com/lutris/docs/blob/master/WineDependencies.md) page to get them.
 
-### DXVK dependencies
-As Battle.Net is a D3D11 app, and some installers use DXVK by default, it's required to install dependencies and right drivers for it. For instructions, refer to [How to: DXVK](https://github.com/lutris/docs/blob/master/HowToDXVK.md).<br>
+### Proper driver installation
+Battle.net requires up-to-date, Vulkan capable graphics drivers.
+For instructions on how to install them, refer to [How to: Installing Drives](https://github.com/lutris/docs/blob/master/InstallingDrivers.md).<br>
 Otherwise, Battle.Net **may not work**.
 
 ### Additional dependencies required specifically for Battle.net:
