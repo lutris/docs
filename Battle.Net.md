@@ -11,7 +11,7 @@ Wine dependencies are **required** for Overwatch to work. Please follow the inst
 
 ### Proper driver installation
 Battle.net requires up-to-date, Vulkan capable graphics drivers.
-For instructions on how to install them, refer to [How to: Installing Drives](https://github.com/lutris/docs/blob/master/InstallingDrivers.md).<br>
+For instructions on how to install them, refer to [How to: Installing Drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md).<br>
 Otherwise, Battle.Net **may not work**.
 
 ### Additional dependencies required specifically for Battle.net:
