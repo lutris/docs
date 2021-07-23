@@ -37,6 +37,7 @@ Add SDL2 Backports PPA (for Faudio package):
 Update packages:
 
     sudo apt-get update
+    sudo apt-get upgrade
     
 Install Wine
 
