@@ -101,7 +101,33 @@ _Note: Only Skylake, Kaby Lake, and Coffee Lake offer full Vulkan support. Broad
 To install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility) and driver), execute following command:
 
     sudo dnf install vulkan-loader vulkan-loader.i686
-    
+
+### Nvidia:
+
+_**Warning**: Please ensure your graphics card is supported by modern Nvidia driver before installing._
+_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
+
+Proprietary driver and support for Vulkan are required for proper functionality of games.
+
+First, update (and reboot) your system:
+
+    sudo dnf update
+    reboot
+Next, make sure the official repos are installed:
+
+    sudo dnf install fedora-workstation-repositories
+Enable the NVIDIA driver repo:
+
+    sudo dnf config-manager --set-enabled rpmfusion-nonfree-nvidia-driver
+Reboot again.
+After the reboot, verify the addition of the repository via the following command:
+
+    sudo dnf repository-packages rpmfusion-nonfree-nvidia-driver info
+If several NVIDIA drivers are loaded, you are good to go. Finally, login, connect to the internet, and open the software app. Click _Add-ons> Hardware Drivers> NVIDIA Linux Graphics Driver> Install._
+
+If you’re using an older GPU or plan to use multiple GPUs, check  [the RPMFusion guide](https://rpmfusion.org/Howto/NVIDIA?highlight=%28CategoryHowto%29)  for further instructions. Finally, to ensure a successful reboot, set “WaylandEnable=false” in  _/etc/gdm/custom.conf_, and make sure to avoid using secure boot.
+
+
 ## openSUSE Tumbleweed
 
 *Notice:* openSUSE Leap releases are currently not officaly supported because they ship an older version of glibc (2.26 but 2.27 is required at least).
@@ -143,28 +169,3 @@ Those will then add the required official NVidia driver repository from https://
 For Vulkan support on NVidia drivers also run:
 
     sudo zypper in libvulkan1 libvulkan1-32bit
-=======
-### Nvidia:
-
-_**Warning**: Please ensure your graphics card is supported by modern Nvidia driver before installing._
-_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
-
-Proprietary driver and support for Vulkan are required for proper functionality of games.
-
-First, update (and reboot) your system:
-
-    sudo dnf update
-    reboot
-Next, make sure the official repos are installed:
-
-    sudo dnf install fedora-workstation-repositories
-Enable the NVIDIA driver repo:
-
-    sudo dnf config-manager --set-enabled rpmfusion-nonfree-nvidia-driver
-Reboot again.
-After the reboot, verify the addition of the repository via the following command:
-
-    sudo dnf repository-packages rpmfusion-nonfree-nvidia-driver info
-If several NVIDIA drivers are loaded, you are good to go. Finally, login, connect to the internet, and open the software app. Click _Add-ons> Hardware Drivers> NVIDIA Linux Graphics Driver> Install._
-
-If you’re using an older GPU or plan to use multiple GPUs, check  [the RPMFusion guide](https://rpmfusion.org/Howto/NVIDIA?highlight=%28CategoryHowto%29)  for further instructions. Finally, to ensure a successful reboot, set “WaylandEnable=false” in  _/etc/gdm/custom.conf_, and make sure to avoid using secure boot.
