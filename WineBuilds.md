@@ -11,7 +11,7 @@ Patchnotes for these releases are available on [lutris/wine release page](https:
 
 ### lutris-fshack
 Same as `lutris`, but includes **fshack**, a software implementation of monitor modesetting (resolution changing), ported over from Proton. With it, your whole monitor will no longer modeset to a lower resolution if the game requests it, instead Wine itself will do it and only do it for the game itself.
-It may also improve fullscreen behavior for games that run in your native resolution, but results may way from game to game.
+It may also improve fullscreen behavior for games that run in your native resolution, but results may vary from game to game.
 Additionally, due to fshack being quite big and modifying a lot of components, some fixes and patches that are used in normal `lutris` aren't compatible with it and thus missing.
 
 ## Deprecated builds
