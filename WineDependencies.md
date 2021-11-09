@@ -103,6 +103,26 @@ Execute following command:
 For a more minimal experience:
 
     sudo dnf install wine-core wine-core.i686
+    
+## Void
+
+Enable multilib repository
+
+    sudo xbps-install void-repo-multilib
+    
+Install Wine
+
+    sudo xbps-install wine wine-32bit
+
+Recommended: Install additional dependencies
+```
+sudo xbps-install mesa-dri mesa-dri-32bit giflib giflib-32bit libpng libpng-32bit libldap libldap-32bit gnutls gnutls-32bit \
+mpg123 libmpg123-32bit libopenal libopenal-32bit v4l-utils v4l-utils-32bit libpulseaudio libpulseaudio-32bit libgpg-error \
+libgpg-error-32bit alsa-plugins alsa-plugins-32bit alsa-lib alsa-lib-32bit libjpeg-turbo libjpeg-turbo-32bit \
+sqlite sqlite-32bit libXcomposite libXcomposite-32bit libXinerama libXinerama-32bit libgcrypt libgcrypt-32bit \
+ncurses ncurses-libs ncurses-libs-32bit ocl-icd ocl-icd-32bit libxslt libxslt-32bit libva libva-32bit gtk+3-32bit \
+gtk+3 gst-plugins-base1 gst-plugins-base1-32bit vulkan-loader vulkan-loader-32bit
+```
 
 ## Other distributions
 
