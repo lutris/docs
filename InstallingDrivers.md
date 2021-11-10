@@ -3,7 +3,7 @@
 
 ### Nvidia:
 
-To get the latest Nvidia drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages, install the 495 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
+To get the latest Nvidia drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 495 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
 To do all of that, run this one command:
 
@@ -23,7 +23,7 @@ To make sure you are running the latest drivers for AMD/Intel graphics, you need
 
 To do all of that, run this one command:
 
-    sudo add-apt-repository ppa:kisak/kisak-mesa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 && sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:i386
+    sudo add-apt-repository ppa:kisak/kisak-mesa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386
 
 Reboot to apply changes.
 
