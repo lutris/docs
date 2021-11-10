@@ -1,65 +1,39 @@
 ﻿
-## Ubuntu
+## Ubuntu / KDE Neon / Other Ubuntu derivatives
 
 ### Nvidia:
 
-To get the latest Nvidia drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa):
+To get the latest Nvidia drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages, install the 495 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
-    sudo add-apt-repository ppa:graphics-drivers/ppa
+To do all of that, run this one command:
 
-Enable 32 bit architecture (if you haven't already):
-
-    sudo dpkg --add-architecture i386 
-
-Update to refresh packages:
-
-    sudo apt update
-
-_**Warning**: Please ensure your graphics card is supported by the 465 driver before installing._
-_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/163238/en-us
-
-Install the 465 driver:
-
-    sudo apt install nvidia-driver-465
-
-Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
-
-    sudo apt install libvulkan1 libvulkan1:i386
+    sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-495 libvulkan1 libvulkan1:i386
 
 Reboot to apply changes.
 
+_**Warning**: Please ensure your graphics card is supported by the 495 driver before installing._
+_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/181274/en-us_
+    
+_**Disclaimer**: Sometimes we forget to update the guide to reference the latest version of the Nvidia driver._
+_You can check the latest version of the Nvidia driver for your gpu here and then replace *495* in **nvidia-driver-495** with the first part of the version number (the one before the dot, **495**.44) that is actually latest: https://www.nvidia.com/Download/index.aspx_
+
 ### AMD / Intel:
 
-Add [kisak-mesa PPA](https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa): 
+To make sure you are running the latest drivers for AMD/Intel graphics, you need to add [kisak-mesa PPA](https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa), enable 32 bit architecture (if you haven't already), update and upgrade your system, install support for 32-bit games and install the support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
-    sudo add-apt-repository ppa:kisak/kisak-mesa
+To do all of that, run this one command:
 
-Enable 32 bit architecture (if you haven't already):
-
-    sudo dpkg --add-architecture i386 
-
-Upgrade your system:
-
-    sudo apt update && sudo apt upgrade
-
-Install support for 32-bit games:
-
-    sudo apt install libgl1-mesa-dri:i386
-
-Install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):    
-
-    sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:i386
-
+    sudo add-apt-repository ppa:kisak/kisak-mesa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 && sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:i386
 
 Reboot to apply changes.
 
 _Note: Only Ubuntu 18.04 and higher is supported for AMD and Intel graphics._
 
-_Note for Intel integrated graphics users: Only Skylake, Kaby Lake, and Coffee Lake offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which may not work with a lot of games. Sandy Bridge and older lack any Vulkan support whatsoever._
+_Note for Intel integrated graphics users: Only Skylake and newer Intel CPUs (processors) offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which will very likely not work with a lot of games properly. Sandy Bridge and older lack any Vulkan support whatsoever._
 
-## Arch / Manjaro / Other Arch derivatives:
+## Arch / Manjaro / Other Arch Linux derivatives:
 
-First, enable multilib.
+First, enable multilib (32-bit support).
 
 To enable multilib repository, uncomment the `[multilib]` section in `/etc/pacman.conf`
 
@@ -77,7 +51,7 @@ _For a list of supported GPUs click here: https://www.nvidia.com/Download/driver
 
 Proprietary driver and support for Vulkan are required for proper functionality of games.
 
-To install it, execute following command:
+To install it, execute the following command:
 
     sudo pacman -S --needed nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 
@@ -93,7 +67,7 @@ To install support for Vulkan API  (will be functional only if you have a [Vulka
 
     sudo pacman -S --needed lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
 
-_Note: Only Skylake, Kaby Lake, and Coffee Lake offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which may not work with a lot of games. Sandy Bridge and older lack any Vulkan support whatsoever._
+_Note for Intel integrated graphics users: Only Skylake and newer Intel CPUs (processors) offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which will very likely not work with a lot of games properly. Sandy Bridge and older lack any Vulkan support whatsoever._
 
 ## Fedora (Incomplete Guide)
 *Note: Dnf will pull most, if not all, AMD/Intel drivers with an install of Lutris, Wine, and/or Steam. Unless on an NVIDIA card, the following guide may be redundant.*
@@ -161,7 +135,7 @@ Those will then add the required official NVidia driver repository from https://
 
 #### Geforce 400 series and later
 
-[Supported producs](https://www.nvidia.com/Download/driverResults.aspx/142567/en-us)
+[Supported products](https://www.nvidia.com/Download/driverResults.aspx/142567/en-us)
 
 [One Click Installer](https://opensuse-community.org/nvidia_G04.ymp)
 
