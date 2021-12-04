@@ -1,6 +1,6 @@
 # What is DXVK?
 
-[DXVK](https://github.com/doitsujin/dxvk) is a Vulkan-based compatibility layer for Direct3D 11. It allows running 3D applications on Linux using Wine.
+[DXVK](https://github.com/doitsujin/dxvk) is a Vulkan-based compatibility layer for Direct3D-9,10 & 11. It allows running 3D applications on Linux using Wine.
 
 For the current status of the project, please refer to the DXVK [wiki](https://github.com/doitsujin/dxvk/wiki).
 
