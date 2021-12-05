@@ -14,6 +14,9 @@ Same as `lutris`, but includes **fshack**, a software implementation of monitor 
 It may also improve fullscreen behavior for games that run in your native resolution, but results may vary from game to game.
 Additionally, due to fshack being quite big and modifying a lot of components, some fixes and patches that are used in normal `lutris` aren't compatible with it and thus missing.
 
+### lutris-ge-lol
+Special version of Lutris Wine made for League of Legends by GloriousEggroll (https://github.com/GloriousEggroll). The reason it's a standalone version is because it contains patches that might not work well with other games or applications.
+
 ## Deprecated builds
 
 ### ge-protonified
