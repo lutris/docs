@@ -23,11 +23,7 @@ Add the repository:
 |------------------|--------------------------------
 |Ubuntu 21.10      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main'
 |Ubuntu 21.04      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ hirsute main'
-|Ubuntu 20.10      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ groovy main'
 |Ubuntu 20.04      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
-|Ubuntu 19.10      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
-|Ubuntu 19.04      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ disco main'
-|Ubuntu 18.10      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ cosmic main'
 |Ubuntu 18.04<br>Linux Mint 19.x | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 |Debian 10 Buster  | sudo apt install software-properties-common<br>sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
 |Debian 11 Bullseye| sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ bullseye main'
