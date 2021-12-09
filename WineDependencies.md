@@ -6,54 +6,12 @@ The version of Wine installed should not matter, it is not even required for Win
 
 Below are a list of commands specific to your distribution. Please, follow them before asking for support.
 
-## Ubuntu/Debian/Linux Mint/Ubuntu derivatives/Debian derivatives
+## Ubuntu/Debian/Ubuntu derivatives/Debian derivatives
 
-Enable 32 bit architecture (if you haven't already): 
+To get all neccesary dependencies, you need to enable 32 bit architecture (if you haven't already), install Wine packages and other additional dependencies.
+To do so in one command, copy and paste this into the terminal
 
-    sudo dpkg --add-architecture i386 
-
-Download and add the repository key:
-
-    wget -nc https://dl.winehq.org/wine-builds/winehq.key
-    sudo apt-key add winehq.key
-
-Add the repository:
-
-|For this version: | Use this command:          
-|------------------|--------------------------------
-|Ubuntu 21.10      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main'
-|Ubuntu 21.04      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ hirsute main'
-|Ubuntu 20.04      | sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
-|Ubuntu 18.04      | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-|Debian 10 Buster  | sudo apt install software-properties-common<br>sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ buster main'
-|Debian 11 Bullseye| sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ bullseye main'
-
-**Only for Ubuntu 18.04:**
-Add SDL2 Backports PPA (for Faudio package):
-
-    sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
-
-Update packages:
-
-    sudo apt-get update
-    sudo apt-get upgrade
-    
-Install Wine
-
-    sudo apt-get install --install-recommends winehq-staging
-
-If you receive this error: `The following packages have unmet dependencies`, execute following command instead:
-
-    sudo apt-get install --install-recommends winehq-staging wine-staging wine-staging-i386 wine-staging-amd64
-
-For compatibility reasons, install these additional libraries:
-
-```
-sudo apt-get install libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 \
-libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386
-```
-
-These libraries may be used by games, launchers, or applications. E.g. Origin, Battle.net, Uplay etc. It's good practice to install these in addition to Wine.
+    sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y wine64 wine32 libasound2-plugins:i386 libsdl2-2.0-0:i386 libdbus-1-3:i386 libsqlite3-0:i386
 
 ##  Arch/Antergos/Manjaro/Other Arch derivatives
 
@@ -103,4 +61,4 @@ For a more minimal experience:
 
 ## Other distributions
 
-To install Wine on other distributions, please, consult the [WineHQ Download](https://wiki.winehq.org/Download) page for more information.
+To install Wine on other distributions, consult the [WineHQ Download](https://wiki.winehq.org/Download) page for more information.
