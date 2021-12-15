@@ -2,65 +2,65 @@
 
 Welcome to Lutris, [a game library manager](https://github.com/lutris/lutris) that allows you to bring your entire game collection together regardless of platform.
 
-This is a guide for new users that are just starting out with Lutris. Once you have [installed the Lutris client](https://lutris.net/downloads) for your distribution, [updated your Nvidia and AMD/Intel drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md) and have a [recent version of WINE](https://wiki.winehq.org/Download), you’ll be ready to go on your Lutris journey.
+This is a guide for new users that are just starting out with Lutris. Once you have [installed the Lutris client](https://lutris.net/downloads) for your distribution, [updated your Nvidia and AMD/Intel drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md) and while not a requirement, it is recommended to have a [recent version of WINE](https://github.com/lutris/docs/blob/master/WineDependencies.md) to pull in all the required dependencies. After that, you’ll be ready to go on your Lutris journey.
 
 ## Installing a Game
 
-In Lutris, there are many ways to install games from your game collections.
+In Lutris, there are many ways to install games from your game collections. For this guide, it will only concentrate on installing a game from a Source.
 
-### Manual Game Installation
+### Configuring your Sources
 
-Clicking the “Plus” button in the top left-hand corner of Lutris, allows you to add any type of game to Lutris, if you have the files available on your system. Once clicked, a dialogue box will open with the following options:
+Under **Sources** on the left-hand side of the client, you’ll find a list of all the Sources you currently have enabled. Clicking one shows all the games that are available from that particular Source.
 
-**Game info**
-- **Name** – the name of the game (you can call the game whatever you like).
-- **Runner** – select the Runner that the game will use (for example, if it is a Linux native game, select “Linux” or if it is a non-Steam Windows game, choose “Wine”. Depending on which Runner you choose, may add additional options in the “Game options” section.
-- **Release year** – the year that the game came out. You can leave this option blank if you wish.
+**Lutris Source**
 
-**Game options**
-- **Executable** – point Lutris to the game’s executable (for Linux, it would usually be a .sh file and for Windows it would be a .exe file).
-- **Arguments** – add additional options here via the command line for your game. Depending on the Runner you choose, the arguments available to you will differ. Please see the individual Runner’s GitHub/Wiki for more information on certain arguments you can pass.
-As an example of arguments you can pass for Steam games using Proton, please see the “Runtime Config Options” section on [Proton’s GitHub](https://github.com/ValveSoftware/Proton/) page.
-- **Working directory** – Lutris uses the directory of the game’s executable by default, but if you wish to change the working directory to another folder, you can do so here.
+The **Lutris** source displays all of the games you have registered in your [Lutris.net](https://lutris.net/) library and allows you to search for any Community Installers that are available for a particular game. Both of these options are placed in tabs at the top of the client after selecting the source.
 
-**Runner options**
+**Local Source**
 
-If any options here are modified, they supersede the base Runner’s configuration.
-- Depending on the Runner you choose, the options provided to you will vary. As an example, choosing the “Steam” Runner will provide you options like “Stop Steam after game exits” or choosing the “Wine” Runner allows you to change Wine versions, run a game “Windowed” and more. **Sticking with the Lutris defaults is advised, unless a particular game isn’t working correctly.**
+The **Local** source displays all of your native Linux games.
 
-**System options**
+**GOG Source**
 
-If you modify these options, they supersede the “Global options” settings in the Lutris Settings Menu. 
-- **Default installation folder** – the default place where you install your games.
-- **Disable Lutris Runtime** – Off by default. If switched on, Lutris will load some libraries that can cause incompatibilities with some games.
-- **Prefer system libraries** – enabled by default and utilises the libraries that come with your system as opposed to the ones that Lutris provides.
-- **Restore resolution on game exit** – Disabled by default, but can be enabled if some games are not automatically restoring your native desktop resolution after exiting the game.
-- **Disable screen saver** – Enabled by default, so your system’s screen saver doesn’t interfere with the currently running game.
-- **FPS counter (MangoHud)** – if you have [MangoHud](https://github.com/flightlessmango/MangoHud) installed to check your game’s FPS and more, set this option to Enabled with either Vulkan or OpenGL (depending on what Graphics API the game is using).
-- **Enable Feral GameMode** – if you have [Feral Interactive’s GameMode](https://github.com/FeralInteractive/gamemode) installed to optimise your system for games, this option by default will be enabled. If GameMode is not installed, the option will be greyed out.
-- **Enabled NVIDIA Prime Render Offload** – if you have the [latest NVIDIA drivers installed with a patched X.Org server](https://download.nvidia.com/XFree86/Linux-x86_64/470.63.01/README/primerenderoffload.html), a specific game can be ran on your Nvidia GPU, then return to your system’s power-saving Intel GPU once the game is closed. This is a great option if configured correctly for laptops with Nvidia Optimus.
-- **Switch resolution to** – before a game starts, Lutris can change your desktop resolution to something that fits the game better. By default, Lutris runs the game at your native desktop resolution.
-- **Environment variables** - enabling specific adjustments to things like translation layers such as DXVK can be applied here. For example, in the **Key** column, you can add ```DXVK_HUD``` and in the **Value** column, you can place ```frametimes``` to display a frametime graph in games that use DXVK.
+The **GOG** source lists every game in your [GOG](https://www.gog.com/) library.
 
-**For more advanced users that are comfortable with playing around with their settings, check the “Show advanced options” box for even more options.**
+**Humble Bundle Source**
+
+The **Humble Bundle** source shows all the games in your [Humble Bundle](https://www.humblebundle.com/) library.
+
+**Epic Games Store Source**
+
+The **Epic Games Store** source will exhibit every game in your [Epic Games Store](https://www.epicgames.com/store/en-US/) library.
+
+**Note – for GOG, Humble Bundle and the Epic Games Store, you have to log into the appropriate source via the connect button that appears after hovering over the source itself, otherwise none of the games linked with the associated source are displayed.**
+
+**Steam**
+
+Once you have the native Linux Steam client installed on your distribution and logged in successfully, all of your Steam games (regardless of platform), will appear here.
+
+**Steam for Windows Source**
+
+The Steam for Windows source lists every Steam game available in your library, run via the Wine Steam Runner. This option is available, in case you do not wish to use the native Linux Steam client with Proton.
+
+**The Lutris team [has said](https://twitter.com/LutrisGaming/status/1454539182647377920) that integration for Steam for Windows will be removed, whilst leaving the Wine Steam Runner for those who still wish to use it.**
 
 ### Installation of a Game from a Source
 
 Installing games from a Source is usually straightforward with Lutris.
 
-1. Connect or sign in to a Source (be it GOG, Steam, Humble Bundle and so forth).
-2. Select the game you wish to install. Lutris will then open a dialogue box and offer you some options for installation (downloading the base game, additional audio files, mods and the like). Depending on the Source used, the options presented vary.
-3. Once you click install, Lutris will handle the rest for you. For example. this includes downloading and running the installer for GOG games (with any associated community written installers for additional configuration) or for a Steam game, opening your Steam client, downloading the game and closing the client when it is done.
+1. Select a Source, then the game you wish to play and click the "Install" button at the bottom of the client. 
+2. Lutris will then open a dialogue box and offer you some options for installation (downloading the base game, additional audio files, mods and much more). Depending on the Source used, the options presented will vary.
+3. Once you click the "Install" button in the dialogue box, Lutris will handle the rest for you. For example. this includes downloading and running the installer for GOG games (with any associated community written installers for additional configuration) or for a Steam game, opening your Steam client, downloading the game and closing the client when the installation is done.
 
-## Lutris settings Menu
+## Lutris Settings Menu
 
-To open the menu, click the “Context Menu” (button with three lines stacked  on top of each other) in the top right-hand corner of the client and then click “Preferences”. These are the options available to you:
+To open the menu, click the “Context Menu” button (the one with three lines stacked on top of each other) in the top right-hand corner of the client and then click “Preferences”. These are the options available to you:
 
 **Interface**
 
 - **Minimize client when a game is launched** - minimises the Lutris client whenever any game is ran.
 - **Hide text under icons (requires a restart)**
-- **Show Tray Icon (requires restart)** - places a little Lutris icon in your system tray to easily run games with.
+- **Show Tray Icon (requires restart)** - places a little Lutris icon in your system tray to easily run your games with.
 - **Use dark theme (requires dark theme variant for Gtk)** - sets the client into dark mode for those with a preference for dark themes.
 
 **Runners**
@@ -69,7 +69,7 @@ Here, you can add, remove and configure all of the Runners available for Lutris.
 
 The “Download” button downloads and installs the Runner, while the “Cog” button opens up the individual settings for each runner. Any settings configured here affect all games globally (unless the Runner’s settings are changed in a specific game’s configuration).
 
-As of writing (December 14th, 2021), the current list of runners are:
+As of writing (14th December, 2021), the current list of Runners are:
 - **Adventure Games Studio** - a graphical adventure engine.
 - **Atari800** - an Atari 400, 800 and XL emulator.
 - **Citra** - a Nintendo 3DS emulator.
@@ -111,7 +111,7 @@ As of writing (December 14th, 2021), the current list of runners are:
 - **Virtual Jaguar** - an Atari Jaguar emulator.
 - **Web** - runs web games.
 - **Wine** - runs Windows games and programs under a compatibility layer.
-- **Wine Steam** - runs the Steam Windows client under Wine.
+- **Wine Steam** - runs the Windows Steam client under Wine.
 - **Yuzu** - another Nintendo Switch emulator.
 - **ZDoom** - the ZDoom DOOM Game Engine.
 
@@ -125,18 +125,30 @@ Provides an output of your current system’s hardware, including **System**, **
 
 **Global options**
 
-Each of the options has already been explained in the **Manual Game Installation** section, however the difference is that each of the options here affects all of the games in your Lutris library, unless a game’s Runner options has been specifically changed.
+These settings are global and affect all the games in your library. However, you can change each setting on a game by game basis if you so prefer. 
+- **Default installation folder** – the default place where you install your games.
+- **Disable Lutris Runtime** – off by default. If switched on, Lutris will load some libraries that can cause incompatibilities with some games.
+- **Prefer system libraries** – enabled by default and utilises the libraries that come with your system as opposed to the ones that Lutris provides.
+- **Restore resolution on game exit** – disabled by default, but can be enabled if some games are not automatically restoring your native desktop resolution after exiting the game.
+- **Disable screen saver** – enabled by default, so your system’s screen saver doesn’t interfere with the currently running game.
+- **FPS counter (MangoHud)** – if you have [MangoHud](https://github.com/flightlessmango/MangoHud) installed to check your game’s FPS and more, set this option to Enabled with either Vulkan or OpenGL (depending on what Graphics API the game is using).
+- **Enable Feral GameMode** – if you have [Feral Interactive’s GameMode](https://github.com/FeralInteractive/gamemode) installed to optimise your system for games, this option by default will be enabled. If GameMode is not installed, the option will be greyed out.
+- **Enabled NVIDIA Prime Render Offload** – if you have the [latest NVIDIA drivers installed with a patched X.Org server](https://download.nvidia.com/XFree86/Linux-x86_64/470.63.01/README/primerenderoffload.html), a specific game can be ran on your Nvidia GPU, then return to your system’s power-saving Intel GPU once the game is closed. This is a great option if configured correctly for laptops with Nvidia Optimus.
+- **Switch resolution to** – before a game starts, Lutris can change your desktop resolution to something that fits the game better. By default, Lutris runs the game at your native desktop resolution.
+- **Environment variables** - enabling specific adjustments to things like translation layers such as DXVK can be applied here. For example, in the **Key** column, you can add ```DXVK_HUD``` and in the **Value** column, you can place ```frametimes``` to display a frametime graph in games that use DXVK.
+
+**For more advanced users that are comfortable with playing around with their settings, check the “Show advanced options” box for even more options.**
 
 ## Context Menu
 
 Right-clicking on any installed game in Lutris, provides the user with these options:
 - **Play** – runs the game.
-- **Show Logs** - opens a separate window and is useful for finding out why particular games are not running.
-- **Configure** - allows you to edit different settings of the game, as described in the **Manual Game Installation** section.
+- **Show Logs** - opens a separate window and is useful for debugging purposes.
+- **Configure** - allows you to edit different settings of the game.
 
 Additionally, images (like a game’s artwork) can also be placed here for as a custom banner and icon, just click the boxes with the Lutris logo inside and choose your image. To remove any images, click the “brush” icon.
 
-A game’s **Identifier** and **Directory** can also be changed here, useful if you decide to move the game’s files to another location.
+A game’s **Identifier** and **Directory** can also be changed here. Changing the directory is useful if you decide to move the game’s files to another location.
 
 - **Add to favorites** - adds the game to the **Favorites** submenu on the left-hand side of the client under **Library**.
 - **Browse files** - opens the directory where the game is installed in your chosen file manager.
@@ -154,7 +166,7 @@ A game’s **Identifier** and **Directory** can also be changed here, useful if 
 
 **Games**
 
-Under Library on the left-hand side, clicking **Games** will display all of the available games that are currently installed in your library.
+Under **Library** on the left-hand side, clicking **Games** will display all of the available games that are currently installed in your library.
 
 **Recent**
 
@@ -163,41 +175,6 @@ Clicking **Recent** will display all of the games that you have played recently.
 **Favorites**
 
 Clicking **Favorites** shows you every game you have selected as your favourites, either via right-clicking the game in your library and selecting “Add to favorites” or the drop-down menu next to the game’s “Play” button at the bottom of the client and then selecting “Add to favorites”.
-
-## Sources
-Under **Sources** on the left-hand side, you’ll find a list of all the Sources you currently have enabled. Clicking one shows all the games that are available from a particular Source.
-
-**Lutris Source**
-
-The **Lutris** source displays all of the games you have registered in your [Lutris.net](https://lutris.net/) library and allows you to search for any community installers that are available for a particular game. Both of these options are placed in tabs at the top of the client after selecting the source.
-
-**Local Source**
-
-The **Local** source displays all of your native Linux games.
-
-**GOG Source**
-
-The **GOG** source shows every game in your [GOG](https://www.gog.com/) library.
-
-**Humble Bundle Source**
-
-The **Humble Bundle** source shows all the games in your [Humble Bundle](https://www.humblebundle.com/) library.
-
-**Epic Games Store Source**
-
-The **Epic Games Store** source will show every game in your [Epic Games Store](https://www.epicgames.com/store/en-US/) library.
-
-**Note – for GOG, Humble Bundle, Epic Games Store, you have to log into the appropriate source via the connect button that appears after hovering over the source itself, otherwise none of the games linked with the associated source/s are displayed.**
-
-**Steam**
-
-Once you have the native Linux Steam client installed on your distribution and logged in successfully, all of your Steam games (regardless of platform), will appear here.
-
-**Steam for Windows Source**
-
-The Steam for Windows source lists every Steam game available in your library, run via the Wine Steam Runner. This option is available, in case you do not wish to use the native Linux Steam client with Proton.
-
-**The Lutris team [has said](https://twitter.com/LutrisGaming/status/1454539182647377920) that integration for Steam for Windows will be removed, whilst leaving the Wine Steam Runner for those who still wish to use it.**
 
 ### Runners
 Any runners you wish to use are placed on the left-hand side under **Sources**. To enable certain runners, open the Lutris Settings Menu → Runners and click the “Download” button to download and automatically install the Runner you wish to use.
@@ -235,13 +212,13 @@ You can find these options just under the “Search Games Bar” at the top of t
 
 On the right of the “View” button, is another button with an arrow pointing downwards. Clicking that will open a drop-down list with the following options:
 
-- **Zoom** – how much you want to zoom in/out of your library. You can either focus on one particular game or zoom out to show a wider selection.
+- **Zoom** – how much you want to zoom in/out of your library. You can either focus on one particular game or zoom out to show a wider selection of games.
 - **Sort Ascending** – sorts your games library by order of ascending first. This applies to each of the categories previously listed above.
 - With the same options as stated above, you can sort your library by Name, Year, Runner, Platform, Last Played, Installed At and Play Time.
 
 **Lutris Settings Menu Options**
 
-On the top-right hand corner of the client is the Lutris Settings Menu . Clicking this also presents another drop-down list with the following options:
+On the top-right hand corner of the client is the Lutris Settings Menu. Clicking this also presents another drop-down list with the following options:
 
 - **Installed Games Only** – shows all of the games you currently have installed in your Lutris library.
 - **Show Hidden Games** – any games you have intentionally hidden, either via right-clicking an installed game in your library and selecting “Hide game from library” or the drop-down menu at the bottom of the screen next to the “Play” button and selecting “Hide game from library”.
