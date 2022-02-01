@@ -1,9 +1,9 @@
 ﻿
 ## Ubuntu / KDE Neon / Other Ubuntu derivatives
 
-### Nvidia:
+### NVIDIA:
 
-To get the latest Nvidia drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 495 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
+To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 495 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
 To do all of that, run this one command:
 
@@ -14,7 +14,7 @@ Reboot to apply changes.
 _**Warning**: Please ensure your graphics card is supported by the 495 driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/181274/en-us_
     
-_**Disclaimer**: Sometimes we forget to update the guide to reference the latest version of the Nvidia driver._
+_**Disclaimer**: Sometimes we forget to update the guide to reference the latest version of the NVIDIA driver._
 _You can check the latest version of the Nvidia driver for your gpu here and then replace *495* in **nvidia-driver-495** with the first part of the version number (the one before the dot, **495**.44) that is actually latest: https://www.nvidia.com/Download/index.aspx_
 
 ### AMD / Intel:
@@ -44,9 +44,9 @@ Include = /etc/pacman.d/mirrorlist</pre>
 
 Then upgrade the system `sudo pacman -Syu`.
 
-### Nvidia:
+### NVIDIA:
 
-_**Warning**: Please ensure your graphics card is supported by modern Nvidia driver before installing._
+_**Warning**: Please ensure your graphics card is supported by modern NVIDIA driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
 
 Proprietary driver and support for Vulkan are required for proper functionality of games.
@@ -76,9 +76,9 @@ To install support for Vulkan API (will be functional only if you have a [Vulkan
 
     sudo dnf install vulkan-loader vulkan-loader.i686
 
-### Nvidia:
+### NVIDIA:
 
-_**Warning**: Please ensure your graphics card is supported by modern Nvidia driver before installing._
+_**Warning**: Please ensure your graphics card is supported by modern NVIDIA driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
 
 Proprietary driver and support for Vulkan are required for proper functionality of games.
@@ -120,12 +120,12 @@ If for some reason they aren't, run the following command:
 
     sudo zypper in kernel-firmware-intel libdrm_intel1 libdrm_intel1-32bit libvulkan1 libvulkan1-32bit libvulkan_intel libvulkan_intel-32bit
     
-### NVidia
+### NVIDIA
 
-The closed source NVidia dirver is not available by default.
-Please check which NVidia GPU you have and run one of the following One-Click Installers.
+The closed source NVIDIA driver is not available by default.
+Please check which NVIDIA GPU you have and run one of the following One-Click Installers.
 
-Those will then add the required official NVidia driver repository from https://download.nvidia.com/opensuse/ and install the required nvidia driver package.
+Those will then add the required official NVIDIA driver repository from https://download.nvidia.com/opensuse/ and install the required NVIDIA driver package.
 
 #### Geforce 600 series and later
 
@@ -140,6 +140,6 @@ Those will then add the required official NVidia driver repository from https://
 [One Click Installer](https://opensuse-community.org/nvidia_G04.ymp)
 
 
-For Vulkan support on NVidia drivers also run:
+For Vulkan support on NVIDIA drivers also run:
 
     sudo zypper in libvulkan1 libvulkan1-32bit
