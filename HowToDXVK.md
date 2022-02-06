@@ -29,6 +29,52 @@ Tutorial on how to add a custom DXVK version:
 <a href="https://youtu.be/X6Vk_J3p2KA" target="_blank"><img src="https://i.imgur.com/TZiyKTB.png" 
 alt="Custom DXVK" width="640" height="360" border="10" /></a>
 
+### Text-based video summary
+
+If you rather follow text than a video, here are the (slightly generalized) steps.
+
+Open a command line interface, and clone the repository from GitHub that you're interested in, and change into its folder:
+
+```
+git clone https://github.com/doitsujin/dxvk.git
+cd dxvk
+```
+
+Check out the branch you are interested in:
+
+```
+git checkout async
+```
+
+Adjust the [simple way to compile DLLs](https://github.com/doitsujin/dxvk#the-simple-way) to your needs (and note the [build requirements](https://github.com/doitsujin/dxvk#requirements)).
+For example, choose the target directory `$HOME/.local/share/lutris/runtime/dxvk/dxvk-async`.
+
+```
+./package-release.sh master $HOME/.local/share/lutris/runtime/dxvk/dxvk-async --no-package
+```
+
+Successful compilation will create a subfolder `dxvk-master` inside your target directory, which in turn contains folders called `x32` and `x64` that contain the dlls.
+Move both folders up once in the directory tree:
+
+```
+mv $HOME/.local/share/lutris/runtime/dxvk/dxvk-async/dxvk-master/x32/ $HOME/.local/share/lutris/runtime/dxvk/dxvk-async/
+
+mv $HOME/.local/share/lutris/runtime/dxvk/dxvk-async/dxvk-master/x64/ $HOME/.local/share/lutris/runtime/dxvk/dxvk-async/
+```
+
+Now delete the folder `dxvk-master` that was created during compilation:
+
+```
+rm -fr $HOME/.local/share/lutris/runtime/dxvk/dxvk-async/dxvk-master
+```
+
+Now open Lutris, and open the configuration of the game you're interested in, e.g. by right-click, *Configure*.
+
+Switch to the tab *Runner options* and change the entry *DXVK version* to the target folder you created, i.e. set it to `dxvk-async`.
+
+Depending on the custom DXVK version you compiled, you can go to tab *System options* and change key/value pairs for the *Environment variables*.
+For example, you can change the key `DXVK_HUD` from value `fps` to `full`.
+
 ## Other information:
 
 #### Common issues when using DXVK:
