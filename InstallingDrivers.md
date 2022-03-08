@@ -143,3 +143,17 @@ Those will then add the required official NVIDIA driver repository from https://
 For Vulkan support on NVIDIA drivers also run:
 
     sudo zypper in libvulkan1 libvulkan1-32bit
+
+## Gentoo (incomplete guide)
+
+To install support for Vulkan API, (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)) and 32-bit games.
+
+YOU NEED to have [mesa compiled with vulkan USE flag (or put that in your make.conf file)](https://packages.gentoo.org/packages/media-libs/mesa)
+```
+sudo emerge --ask media-libs/vulkan-loader
+```
+#### Files you may or may not need to edit
+
+some larger games such as ARK:Survival evolved requires editing of certain files in order to work.
+
+You may need to add ```* hard nofile 1048576```  in /etc/security/limits.conf. This is done because the game is trying to open more files than the system allows it to. 
