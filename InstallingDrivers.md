@@ -53,7 +53,10 @@ Proprietary driver and support for Vulkan are required for proper functionality 
 
 To install it, execute the following command:
 
-    sudo pacman -S --needed nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+_**Warning**: Installing nvidia-settings on Manjaro will fail as it isn't in the repos and gets installed with the drivers themself._
+_To make sure you're running proprietary Nvidia drivers you should run sudo mhwd -i pci video-nvidia_
+
+	sudo pacman -S --needed nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 
 ### AMD
 
