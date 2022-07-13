@@ -31,15 +31,17 @@ Origin will try to update itself again and this time, it will succeed.
 
 Origin's overlay, Origin In-Game, doesn't run well under Wine and because of this we recommend you disable it to avoid any potential issues. If a game requires it for certain features go ahead and enable it but no guarantees!
 
-### Blank window with i3 WM
+### Issues with tiling window managers
 
-Origin is composed of multiple smaller windows so i3 will tile that making the main Origin window look empty.
+Origin is composed of multiple smaller windows that tiling window managers usually don't know how to manage, causing issues like Origin being unusably slow, the window looking empty, or crashes.
 
-To fix this add the following to your i3 config file:
+To fix this, add `origin.exe` to the exceptions of your window manager. For example, add to your i3/Sway configuration file:
 
 ```
 for_window [instance="origin.exe"] floating enable
 ```
+
+You can also fix this by enabling `Windowed (virtual desktop)` on Lutris's runner options.
 
 ### Game Installs:
 
