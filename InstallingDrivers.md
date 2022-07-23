@@ -3,7 +3,7 @@
 
 ### NVIDIA:
 
-To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 510 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
+To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 515 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
 To do all of that, run this one command:
 
