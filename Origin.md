@@ -4,11 +4,6 @@
 
 To install Origin, you can use our Lutris installer: https://lutris.net/games/origin
 
-### Additional system dependencies required for Origin installation:
-* Arch: lib32-gnutls lib32-libldap lib32-libgpg-error lib32-libxml2 lib32-alsa-plugins lib32-sdl2 lib32-freetype2 lib32-dbus lib32-libgcrypt libgcrypt
-* Ubuntu: libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386
-* Fedora: gnutls.i686 openldap.i686 libgpg-error.i686 libxml2.i686 alsa-plugins-*.i686 SDL2.i686 freetype.i686 dbus-libs.i686 libgcrypt.i686 libgcrypt.x86_64
-
 The following is a list of issues and workarounds found when using it under Wine.
 
 ## Issues with Origin:
