@@ -7,7 +7,7 @@ To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Dri
 
 To do all of that, run this one command:
 
-    sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-510 libvulkan1 libvulkan1:i386
+    sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-515 libvulkan1 libvulkan1:i386
 
 Reboot to apply changes.
 
@@ -15,7 +15,7 @@ _**Warning**: Please ensure your graphics card is supported by the 510 driver be
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/186156/en-us_
     
 _**Disclaimer**: Sometimes we forget to update the guide to reference the latest version of the NVIDIA driver._
-_You can check the latest version of the Nvidia driver for your gpu here and then replace *510* in **nvidia-driver-510** with the first part of the version number (the one before the dot, **510**.47.03) that is actually latest: https://www.nvidia.com/Download/index.aspx_
+_You can check the latest version of the Nvidia driver for your gpu here and then replace *515* in **nvidia-driver-515** with the first part of the version number (the one before the dot, **515**.48.07) that is actually latest: https://www.nvidia.com/Download/index.aspx_
 
 ### AMD / Intel:
 
