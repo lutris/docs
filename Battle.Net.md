@@ -16,7 +16,7 @@ Otherwise, Battle.Net **may not work**.
 
 ### Additional dependencies required specifically for Battle.net:
 These dependencies may already be installed on your system, but it won't hurt to ensure you have them.
-* Ubuntu: `libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libsqlite3-0:i386`
+* Ubuntu: `libgnutls30:i386 libldap-2.5-0:i386 libgpg-error0:i386 libsqlite3-0:i386`
 * Arch: `lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse lib32-alsa-plugins`
 * Fedora: `freetype.i686 gnutls.i686 openldap.i686 libgpg-error.i686 sqlite2.i686 pulseaudio-libs.i686`
 * Solus: `libgnutls libgnutls-devel libgnutls-32bit libgnutls-32bit-devel openldap-devel openldap-32bit-devel libgpg-error-devel libgpg-error-32bit libgpg-error-32bit-devel sqlite3 sqlite3-32bit`
