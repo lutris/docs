@@ -11,7 +11,7 @@ To do all of that, run this one command:
 
 Reboot to apply changes.
 
-_**Warning**: Please ensure your graphics card is supported by the 510 driver before installing._
+_**Warning**: Please ensure your graphics card is supported by the 515 driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/186156/en-us_
     
 _**Disclaimer**: Sometimes we forget to update the guide to reference the latest version of the NVIDIA driver._
