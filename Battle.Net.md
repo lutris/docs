@@ -14,15 +14,6 @@ Battle.net requires up-to-date, Vulkan capable graphics drivers.
 For instructions on how to install them, refer to [How to: Installing Drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md).<br>
 Otherwise, Battle.Net **may not work**.
 
-### Additional dependencies required specifically for Battle.net:
-These dependencies may already be installed on your system, but it won't hurt to ensure you have them.
-* Ubuntu: `libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libsqlite3-0:i386`
-* Arch: `lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse lib32-alsa-plugins`
-* Fedora: `freetype.i686 gnutls.i686 openldap.i686 libgpg-error.i686 sqlite2.i686 pulseaudio-libs.i686`
-* Solus: `libgnutls libgnutls-devel libgnutls-32bit libgnutls-32bit-devel openldap-devel openldap-32bit-devel libgpg-error-devel libgpg-error-32bit libgpg-error-32bit-devel sqlite3 sqlite3-32bit`
-* OpenSuse: `libgnutls.so.30 libgnutls-devel libgnutls.so.28 libldap libgpg-error libvulkan_radeon-32bit` (Or libgpg-error.so.0)
-* Gentoo: `gnutls libgpg-error sqlite app-crypt/p11-kit sys-libs/readline libusb`, all with `abi_x86_32` enabled
-
 ##  Known issues and troubleshooting
 Bugs, misconfigured systems and missing dependencies can sometimes cause issues with Battle.Net:
 
