@@ -2,7 +2,8 @@
 World of Warcraft works great in Linux. DX9 / OpenGL renderer for WoW are gone, you need to use DX11. DX11 to OpenGL in Wine(Staging) is slow, but if you use DXVK you will get great fps.
 
 ## Blizzard App
-World of Warcraft is installed and updated by Blizzard App. It is advised to install World of Warcraft game data outside of the Wine Prefix, so that when you want to make a fresh install of the prefix, you can just delete and recreate without losing the game data.
+World of Warcraft is installed and updated by Blizzard App. It is advised to install World of Warcraft game data outside of the Wine Prefix, so that when you want to make a fresh install of the prefix, you can just delete and recreate without losing the game data.  However, this will break the in-game shop with details in [this post](https://forums.lutris.net/t/battlenet-ingame-shop-in-world-of-warcraft/10028/5).  This can be fix by bind mounting the game data folder inside the prefix.
+Example: ```mount --bind "$HOME/Games/World of Warcraft" "$HOME/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft"```
 
 ### **IMPORTANT:** Dependencies need to be installed first
 The installer for WoW actually installs Blizzard app. Make sure you have the dependencies listed on the page there installed: [Blizzard App](https://github.com/lutris/docs/blob/master/Battle.Net.md). If you do not do this, you will not be able to install World of Warcraft.
