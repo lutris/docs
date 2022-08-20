@@ -14,7 +14,7 @@ For the current status of the project, please refer to the DXVK [wiki](https://g
 
 ## Installing Supported drivers:
 
-To take advantage of DXVK and it's improved performance you ***must*** install a supported graphics driver and Vulkan dependencies.
+To take advantage of DXVK and its improved performance you ***must*** install a supported graphics driver and Vulkan dependencies.
 
 **To learn how to do that, follow our guide here: _[Installing Drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md)_**
 
