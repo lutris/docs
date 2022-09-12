@@ -21,3 +21,6 @@ Go to winetricks and install Arial font
 
 ## Cursor reset to center after click
 to game chat write `/console rawMouseEnable 1`, if rotate is block by screen, set `Lock Cursor to Window` (Interface -> Mouse)
+
+## Memory Access Violation Error (#132) during load screens
+Install `sapi.dll` through winetricks.
