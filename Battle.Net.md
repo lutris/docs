@@ -42,7 +42,13 @@ Go to options for Battle.Net - disable hardware acceleration.
 You might also have success if you try [deleting the app's cache directory](https://us.battle.net/support/en/article/34721), which will be in the wine prefix's `drive_c/ProgramData/` directory.
 
 ### Black screen when starting game
-Go to options for Battle.Net- disable streaming
+The main reason for black screens is caused by the game running on windows 10 instead of windows 7.
+
+1. Select the game you want to play in lutris
+2. Select winetricks from the arrow up button next to the wine glass ([you might need to disable Lutris Runtime first](https://github.com/lutris/lutris/issues/4231))
+3. Once a dialog comes in select "Select the defaut wineprefix" and click "Ok" (if the dialog doesn't come in you might need to install zenity or kdialog)
+4. Click "Ok" and then select "Run winecfg"
+5. From the "Windows Version" dropdown select Windows 7, click "Apply" and "Ok".
 
 ### Sleeping Agent / issues with installing / updating :
 <details>
