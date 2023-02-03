@@ -39,6 +39,12 @@ Also may be caused by not rebooting after installing drivers.
 If the message appears when DXVK is in use, and it works with DXVK disabled, make sure you installed Vulkan correctly, including 32 bit packages.
 If the issue persists, try removing Lutris's DXVK catalog in `.local/share/lutris/runtime/dxvk` (.local is a hidden folder inside your `Home` directory).
 
+If disabling DXVK doesn't work, it might be an issue with NTFS. Although NTFS is not recommended, the problem occurs due to how the Battle.net app checks for the required DLLs, which, for Windows, file names are case-insensitive, whereas for Linux, file names are case-sensitive. In other words, the app can't find the required DLLs because Linux treats those DLLs as case-sensitive and therefore the app won't launch.
+
+To fix it, try renaming the following files in `drive_c/Program Files (x86)/Battle.net/Battle.net.xxxxx` (where xxxxx is the latest version you have installed):
+- `msvcp140.dll` -> `MSVCP140.dll`
+- `vcruntime140.dll` -> `VCRUNTIME140.dll`
+
 ### Spinning Icon, no login buttons
 Go to options for Battle.Net - disable hardware acceleration.
 
