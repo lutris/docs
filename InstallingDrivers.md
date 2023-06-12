@@ -5,7 +5,16 @@
 
 Make sure having enabled 32bit repository :
 
-    sudo dpkg --add-architecture i386 
+    sudo dpkg --add-architecture i386 && sudo add-apt-repository non-free && sudo add-apt-repository contrib && sudo apt update && sudo apt install nvidia-driver
+
+
+
+
+
+
+
+
+
 
 Go to this website, https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Debian, chose netowrk .deb and coy/paste the lines in the terminal to install nvidia repository to be updated to the latest stable drivers.
 
