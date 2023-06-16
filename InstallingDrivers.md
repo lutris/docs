@@ -1,13 +1,40 @@
 ﻿
+## Debian 
+
+### NVIDIA
+
+Make sure having enabled 32bit repository :
+
+    sudo dpkg --add-architecture i386 && sudo add-apt-repository non-free && sudo add-apt-repository contrib && sudo apt update && sudo apt install nvidia-driver
+
+
+
+
+
+
+
+
+
+
+Go to this website, https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Debian, chose netowrk .deb and coy/paste the lines in the terminal to install nvidia repository to be updated to the latest stable drivers.
+
+### AMD / Intel
+
+Adding the kisak mesa repository as trusted :
+
+    sudo echo "deb [trusted=yes] https://ppa.launchpadcontent.net/kisak/kisak-mesa/ubuntu kinetic main" > /etc/apt/source.list.d/kisak-fresh.list && sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com F63F0F2B90935439 && sudo mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d/kisak-fresh.gpg && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt full-upgrade -y &&  sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386 && sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com F63F0F2B90935439 && sudo mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d/kisak-fresh.gpg
+
+Reboot to apply changes.
+
 ## Ubuntu / KDE Neon / Other Ubuntu derivatives
 
 ### NVIDIA:
 
-To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 515 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
+To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the nvidia-driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
 To do all of that, run this one command:
 
-    sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-515 libvulkan1 libvulkan1:i386
+    sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver libvulkan1 libvulkan1:i386
 
 Reboot to apply changes.
 
