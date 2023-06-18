@@ -8,6 +8,8 @@ Below are a list of commands specific to your distribution. Please, follow them 
 
 ## Ubuntu/Debian/Ubuntu derivatives/Debian derivatives
 
+NOTE: Mint is not supported and these instructions **WILL NOT**  work in Mint without manual intervention that is outside the scope of this guide.  Following them **WILL** leave you packages in a broken state!
+
 To get all neccesary dependencies, you need to enable 32 bit architecture (if you haven't already), install Wine packages and other additional dependencies.
 To do so in one command, copy and paste this into the terminal
 
