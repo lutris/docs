@@ -1,20 +1,11 @@
-﻿
-## Debian 
+
+## Debian 11/12
 
 ### NVIDIA
 
 Make sure having enabled 32bit repository :
 
-    sudo dpkg --add-architecture i386 && sudo add-apt-repository non-free && sudo add-apt-repository contrib && sudo apt update && sudo apt install nvidia-driver
-
-
-
-
-
-
-
-
-
+    sudo dpkg --add-architecture i386 && sudo add-apt-repository -y non-free && sudo add-apt-repository -y contrib && sudo apt update && sudo apt install nvidia-driver libvulkan1 libvulkan1:i386 nvidia-driver-libs:i386
 
 Go to this website, https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Debian, chose netowrk .deb and coy/paste the lines in the terminal to install nvidia repository to be updated to the latest stable drivers.
 
@@ -34,7 +25,7 @@ To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Dri
 
 To do all of that, run this one command:
 
-    sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver libvulkan1 libvulkan1:i386
+    sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver libvulkan1 libvulkan1:i386 nvidia-driver-libs:i386
 
 Reboot to apply changes.
 
