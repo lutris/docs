@@ -3,7 +3,7 @@
 
 ### NVIDIA:
 
-NOTE: Mint is not supported and these instructions **MAY NOT**  work in Mint.   Following them may leave you packages in a **broken state!**. You have been warned!
+NOTE: Mint is not supported and these instructions **MAY NOT**  work in Mint.   Following them may leave you packages in a **broken state!** or leave you with **missing drivers**. You have been warned!
 
 
 To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 515 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
@@ -22,7 +22,7 @@ _You can check the latest version of the Nvidia driver for your gpu here and the
 
 ### AMD / Intel:
 
-**NOTE:** Mint is not supported and these instructions **WILL NOT** work in Mint without manual intervention that is outside the scope of this guide.  Following them **WILL** leave you packages in a broken state!!
+**NOTE:** Mint is not supported and these instructions **WILL NOT** work in Mint without manual intervention that is outside the scope of this guide.  Following them **WILL** leave your packages in a broken state!!
 
 To make sure you are running the latest drivers for AMD/Intel graphics, you need to add [kisak-mesa PPA](https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa), enable 32 bit architecture (if you haven't already), update and upgrade your system, install support for 32-bit games and install the support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
 
