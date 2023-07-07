@@ -18,7 +18,7 @@ Otherwise, Battle.Net **may not work**.
 Bugs, misconfigured systems and missing dependencies can sometimes cause issues with Battle.Net:
 
 ### Login and Battle.net itself are extremely slow
-Make sure your hostname resolves to 127.0.0.1 in your /etc/hosts file. The first line should be something like `127.0.0.1		localhost myhostname.localdomain myhostname` where myhostname is replaced by your actual hostname. You can get your hostname by launching the `hostname` command.
+Make sure your hostname resolves to 127.0.0.1. Edit `/etc/hosts` with `sudo nano /etc/hosts` and the first line should be something like `127.0.0.1		localhost myhostname.localdomain myhostname` where myhostname is replaced by your actual hostname. You can get your hostname by launching the `hostname` command. Do not touch the rest of the file and be careful with mistakes and typos as they can cause serious issues with your system.
 
 ### The installer window does not show up, installation is stuck
 Usually it's caused by missing wine dependencies, but sometimes it's a result of an unknown bug in KDE.
