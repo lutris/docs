@@ -151,3 +151,32 @@ Those will then add the required official NVIDIA driver repository from https://
 For Vulkan support on NVIDIA drivers also run:
 
     sudo zypper in libvulkan1 libvulkan1-32bit
+
+
+## Void Linux
+
+For 32-bit drivers, enable the `multilib` repository by installing package `void-repo-multilib`. If using the proprietary NVIDIA driver, enable the `nonfree` and `multilib-nonfree` repositories as well by installing `void-repo-nonfree` and `void-repo-multilib-nonfree`. Sync the repository index files with `sudo xbps-install -S`.
+
+**Note:** Not all of the commands below have been thoroughly tested and might install packages that are not strictly necessary.
+
+### NVIDIA
+
+**Note:** The following command assumes that the most recent NVIDIA drivers can be used. If you have an older NVIDIA graphics card, choose the appropriate version of `nvidia` and `nvidia-libs-32bit`.
+
+```console
+sudo xbps-install mesa mesa-32bit vulkan-loader vulkan-loader-32bit nvidia nvidia-libs-32bit
+```
+
+### AMD
+
+```console
+sudo xbps-install mesa mesa-32bit vulkan-loader vulkan-loader-32bit mesa-vulkan-radeon mesa-vulkan-radeon-32bit
+```
+
+Alternatively, `amdvlk` and `amdvlk-32bit` can be used instead of `mesa-vulkan-radeon` and `mesa-vulkan-radeon-32bit`.
+
+### Intel
+
+```console
+sudo xbps-install mesa mesa-32bit vulkan-loader vulkan-loader-32bit mesa-vulkan-intel mesa-vulkan-intel-32bit
+```
