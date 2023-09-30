@@ -168,7 +168,7 @@ To use the amdgpu graphics driver on XServer, add the following lines to your Ni
 services.xserver.enable = true; # to enable the xorg server
 services.xserver.videoDrivers = [ "amdgpu" ]; # to load the amdgpu kernel module
 ```
-## NVIDIA
+### NVIDIA
 
 Add the following lines to your NixOS hardware configuration, by default it should be at ``/etc/nixos/hardware-configuration.nix``
 
@@ -220,7 +220,7 @@ hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_340
 
 For most users, the first option will be fine, but if you have a very old nvidia GPU, then using a legacy driver is needed.
 
-## Renderer configuration (OpenGL, Vulkan)
+### Renderer configuration (OpenGL, Vulkan)
 
 To enable OpenGL and Vulkan, you can add the following lines to your NixOS configuration, the file is located at ``/etc/nixos/configuration.nix`` by default.
 
