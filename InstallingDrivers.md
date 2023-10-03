@@ -151,3 +151,106 @@ Those will then add the required official NVIDIA driver repository from https://
 For Vulkan support on NVIDIA drivers also run:
 
     sudo zypper in libvulkan1 libvulkan1-32bit
+
+## NixOS
+
+*Notice:* Do NOT download video drivers via building it, installing via ``nix-env`` or such, putting the lines below and rebuilding is the safest way to download video drivers on NixOS.
+
+### AMD
+
+Add the following lines to your NixOS hardware config, by default it should be at ``/etc/nixos/hardware-configuration.nix``
+
+```boot.initrd.kernelModules = [ "amdgpu" ];```
+
+To use the amdgpu graphics driver on XServer, add the following lines to your NixOS config, by default it should be at ``/etc/nixos/configuration.nix`` (customize as you prefer)
+
+```
+services.xserver.enable = true; # to enable the xorg server
+services.xserver.videoDrivers = [ "amdgpu" ]; # to load the amdgpu kernel module
+```
+### NVIDIA
+
+Add the following lines to your NixOS hardware configuration, by default it should be at ``/etc/nixos/hardware-configuration.nix``
+
+```
+boot.initrd.kernelModules = [ "nvidia" ]; 
+blacklistedKernelModules = ["nouveau"];
+```
+Add the following lines to your NixOS configuration, by default it should be at ``/etc/nixos/configuration.nix`` (customize as you prefer)
+
+```
+# Enable the Xorg Xserver
+  services.xserver.enable = true;
+# Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    # Modesetting is required.
+    modesetting.enable = true;
+    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
+    powerManagement.enable = false;
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = false;
+    # Use the NVidia open source kernel module (not to be confused with the
+    # independent third-party "nouveau" open source driver).
+    # Support is limited to the Turing and later architectures. Full list of 
+    # supported GPUs is at: 
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Only available from driver 515.43.04+
+    # Do not disable this unless your GPU is unsupported or if you have a good reason to.
+    open = true;
+    # Enable the Nvidia settings menu,
+	# accessible via `nvidia-settings`.
+    nvidiaSettings = true;
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+```
+Adjust the ``package`` variable according to your needs.
+
+Determine which Nvidia driver package you need in accordance with your hardware. The following options are available:
+```
+hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable
+hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta
+hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production (installs 535)
+hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta
+hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_390
+hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_340
+```
+
+For most users, the first option will be fine, but if you have a very old nvidia GPU, then using a legacy driver is needed.
+
+### Renderer configuration (OpenGL, Vulkan)
+
+To enable OpenGL and Vulkan, you can add the following lines to your NixOS configuration, the file is located at ``/etc/nixos/configuration.nix`` by default.
+
+```
+hardware.opengl.driSupport = true;
+# For 32 bit applications
+hardware.opengl.driSupport32Bit = true;
+hardware.opengl.extraPackages = with pkgs; [
+  rocm-opencl-icd
+  rocm-opencl-runtime
+];
+```
+
+amdvlk is not recommended but on older AMD hardware, it can be helpful, so to use amdvlk add the following lines to your configuration instead.
+
+```
+hardware.opengl.driSupport = true;
+# For 32 bit applications
+hardware.opengl.driSupport32Bit = true;
+hardware.opengl.extraPackages = with pkgs; [
+  amdvlk
+];
+```
+
+And to verify if you have OpenGL properly set up, you can install ``clinfo``.
+
+For additional troubleshooting steps, [you can refer to the NixOS wiki](https://nixos.wiki/wiki)
+
+Links: 
+[AMD](https://nixos.wiki/wiki/AMD_GPU);
+[NVIDIA](https://nixos.wiki/wiki/Nvidia);
+[Intel](https://nixos.wiki/wiki/Intel_Graphics);
+
