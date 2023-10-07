@@ -174,7 +174,7 @@ Add the following lines to your NixOS hardware configuration, by default it shou
 
 ```
 boot.initrd.kernelModules = [ "nvidia" ]; 
-blacklistedKernelModules = ["nouveau"];
+boot.blacklistedKernelModules = ["nouveau"];
 ```
 Add the following lines to your NixOS configuration, by default it should be at ``/etc/nixos/configuration.nix`` (customize as you prefer)
 
