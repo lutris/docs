@@ -1,4 +1,6 @@
 ﻿
+NOTE: The information in this page is NOT endorsed by the Lutris development team. It is entirely written by the community.
+
 ## Ubuntu / KDE Neon / Other Ubuntu derivatives
 
 ### NVIDIA:
