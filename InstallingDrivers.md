@@ -1,5 +1,6 @@
 ﻿
-NOTE: The information in this page is NOT endorsed by the Lutris development team. It is entirely written by the community.
+**NOTE:** The information in this page is NOT endorsed by the Lutris development team. It is entirely written by the community.
+
 
 ## Ubuntu / KDE Neon / Other Ubuntu derivatives
 
@@ -9,6 +10,8 @@ NOTE: Mint is not supported and these instructions **MAY NOT**  work in Mint.   
 
 
 To get the latest NVIDIA drivers it is necessary to add the [Proprietary GPU Drivers PPA](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa), enable 32 bit architecture (if you haven't already), update to refresh packages and then install the 535 driver and support for the Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
+
+**NOTE** YOU DO NOT NEED TO USE A PPA TO INSTALL VULKAN AND DRIVERS
 
 To do all of that, run this one command:
 
@@ -27,6 +30,8 @@ _You can check the latest version of the Nvidia driver for your gpu here and the
 **NOTE:** Mint is not supported and these instructions **WILL NOT** work in Mint without manual intervention that is outside the scope of this guide.  Following them **WILL** leave your packages in a broken state!!
 
 To make sure you are running the latest drivers for AMD/Intel graphics, you need to add [kisak-mesa PPA](https://launchpad.net/~kisak/+archive/ubuntu/kisak-mesa), enable 32 bit architecture (if you haven't already), update and upgrade your system, install support for 32-bit games and install the support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility)):
+
+**NOTE** YOU DO NOT NEED TO USE A PPA TO INSTALL VULKAN AND DRIVERS
 
 To do all of that, run this one command:
 
