@@ -59,6 +59,16 @@ For a more minimal experience:
 
     sudo dnf install wine-core wine-core.i686
 
+## Gentoo
+
+**The use of Wine on Gentoo Linux requires a profile with multilib support.**
+
+Ensure that CONFIG_COMPAT_32BIT_TIME is enabled in your kernel.
+
+Install the virtual wine package:
+
+    sudo emerge --ask virtual/wine
+
 ## Other distributions
 
 To install Wine on other distributions, consult the [WineHQ Download](https://wiki.winehq.org/Download) page for more information.
