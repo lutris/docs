@@ -1,6 +1,23 @@
-﻿
 **NOTE:** The information in this page is NOT endorsed by the Lutris development team. It is entirely written by the community.
 
+# Installing Drivers
+
+## Debian (incomplete guide)
+
+### NVIDIA:
+
+You will need the latest NVIDIA drivers and also the libvulkan1 package.  It's also not a bad idea to add the i386 architecture.
+
+You can do all of that with the following command:
+
+```bash
+sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install nvidia-driver libvulkan1
+```
+
+Reboot to apply changes.
+
+_**Warning**: Please ensure your graphics card is supported by the 515 driver before installing._
+_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/186156/en-us_
 
 ## Ubuntu / KDE Neon / Other Ubuntu derivatives
 
@@ -21,7 +38,7 @@ Reboot to apply changes.
 
 _**Warning**: Please ensure your graphics card is supported by the 535 driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/186156/en-us_
-    
+
 _**Disclaimer**: Sometimes we forget to update the guide to reference the latest version of the NVIDIA driver._
 _You can check the latest version of the Nvidia driver for your gpu here and then replace *535* in **nvidia-driver-535** with the first part of the version number (the one before the dot, **535**.48.07) that is actually latest: https://www.nvidia.com/Download/index.aspx_
 
@@ -127,14 +144,14 @@ Usually, if you have an AMD GPU running with open source drivers (Mesa), the req
 If for some reason they aren't, run the following command:
 
     sudo zypper in kernel-firmware-amdgpu libdrm_amdgpu1 libdrm_amdgpu1-32bit libdrm_radeon1 libdrm_radeon1-32bit libvulkan_radeon libvulkan_radeon-32bit libvulkan1 libvulkan1-32bit
-    
+
 ### Intel
 
 Usually, if you have an Intel iGPU running with open source drivers (Mesa), the required packages should already be installed.
 If for some reason they aren't, run the following command:
 
     sudo zypper in kernel-firmware-intel libdrm_intel1 libdrm_intel1-32bit libvulkan1 libvulkan1-32bit libvulkan_intel libvulkan_intel-32bit
-    
+
 ### NVIDIA
 
 The closed source NVIDIA driver is not available by default.
@@ -180,7 +197,7 @@ services.xserver.videoDrivers = [ "amdgpu" ]; # to load the amdgpu kernel module
 Add the following lines to your NixOS hardware configuration, by default it should be at ``/etc/nixos/hardware-configuration.nix``
 
 ```
-boot.initrd.kernelModules = [ "nvidia" ]; 
+boot.initrd.kernelModules = [ "nvidia" ];
 boot.blacklistedKernelModules = ["nouveau"];
 ```
 Add the following lines to your NixOS configuration, by default it should be at ``/etc/nixos/configuration.nix`` (customize as you prefer)
@@ -200,9 +217,9 @@ Add the following lines to your NixOS configuration, by default it should be at 
     powerManagement.finegrained = false;
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     # Do not disable this unless your GPU is unsupported or if you have a good reason to.
     open = true;
@@ -256,8 +273,7 @@ And to verify if you have OpenGL properly set up, you can install ``clinfo``.
 
 For additional troubleshooting steps, [you can refer to the NixOS wiki](https://nixos.wiki/wiki)
 
-Links: 
+Links:
 [AMD](https://nixos.wiki/wiki/AMD_GPU);
 [NVIDIA](https://nixos.wiki/wiki/Nvidia);
 [Intel](https://nixos.wiki/wiki/Intel_Graphics);
-
