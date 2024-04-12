@@ -11,7 +11,7 @@ You will need the latest NVIDIA drivers and also the libvulkan1 package.  It's a
 You can do all of that with the following command:
 
 ```bash
-sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install nvidia-driver libvulkan1 && sudo apt install libvulkan1:i386
+sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install nvidia-driver libvulkan1 libvulkan1:i386
 ```
 
 Reboot to apply changes.
