@@ -21,7 +21,7 @@ Reboot to apply changes.
 
 _**Warning**: Please ensure your graphics card is supported by the 535 driver before installing._
 _For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/186156/en-us_
-    
+
 _**Disclaimer**: Sometimes we forget to update the guide to reference the latest version of the NVIDIA driver._
 _You can check the latest version of the Nvidia driver for your gpu here and then replace *535* in **nvidia-driver-535** with the first part of the version number (the one before the dot, **535**.48.07) that is actually latest: https://www.nvidia.com/Download/index.aspx_
 
@@ -84,39 +84,6 @@ To install support for Vulkan API  (will be functional only if you have a [Vulka
 
 _Note for Intel integrated graphics users: Only Skylake and newer Intel CPUs (processors) offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which will very likely not work with a lot of games properly. Sandy Bridge and older lack any Vulkan support whatsoever._
 
-## Fedora (Incomplete Guide)
-*Note: Dnf will pull most, if not all, AMD/Intel drivers with an install of Lutris, Wine, and/or Steam. Unless on an NVIDIA card, the following guide may be redundant.*
-
-To install support for Vulkan API (will be functional only if you have a [Vulkan capable GPU](https://en.wikipedia.org/wiki/Vulkan_(API)#Compatibility) and driver), execute following command:
-
-    sudo dnf install vulkan-loader vulkan-loader.i686
-
-### NVIDIA:
-
-_**Warning**: Please ensure your graphics card is supported by modern NVIDIA driver before installing._
-_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/149138/en-us_
-
-Proprietary driver and support for Vulkan are required for proper functionality of games.
-
-First, update (and reboot) your system:
-
-    sudo dnf update
-    reboot
-Next, make sure the official repos are installed:
-
-    sudo dnf install fedora-workstation-repositories
-Enable the NVIDIA driver repo:
-
-    sudo dnf config-manager --set-enabled rpmfusion-nonfree-nvidia-driver
-Reboot again.
-After the reboot, verify the addition of the repository via the following command:
-
-    sudo dnf repository-packages rpmfusion-nonfree-nvidia-driver info
-If several NVIDIA drivers are loaded, you are good to go. Finally, login, connect to the internet, and open the software app. Click _Add-ons> Hardware Drivers> NVIDIA Linux Graphics Driver> Install._
-
-If you’re using an older GPU or plan to use multiple GPUs, check  [the RPMFusion guide](https://rpmfusion.org/Howto/NVIDIA?highlight=%28CategoryHowto%29)  for further instructions. Finally, to ensure a successful reboot, set “WaylandEnable=false” in  _/etc/gdm/custom.conf_, and make sure to avoid using secure boot.
-
-
 ## openSUSE Tumbleweed
 
 *Notice:* openSUSE Leap releases are currently not officaly supported because they ship an older version of glibc (2.26 but 2.27 is required at least).
@@ -127,14 +94,14 @@ Usually, if you have an AMD GPU running with open source drivers (Mesa), the req
 If for some reason they aren't, run the following command:
 
     sudo zypper in kernel-firmware-amdgpu libdrm_amdgpu1 libdrm_amdgpu1-32bit libdrm_radeon1 libdrm_radeon1-32bit libvulkan_radeon libvulkan_radeon-32bit libvulkan1 libvulkan1-32bit
-    
+
 ### Intel
 
 Usually, if you have an Intel iGPU running with open source drivers (Mesa), the required packages should already be installed.
 If for some reason they aren't, run the following command:
 
     sudo zypper in kernel-firmware-intel libdrm_intel1 libdrm_intel1-32bit libvulkan1 libvulkan1-32bit libvulkan_intel libvulkan_intel-32bit
-    
+
 ### NVIDIA
 
 The closed source NVIDIA driver is not available by default.
@@ -180,7 +147,7 @@ services.xserver.videoDrivers = [ "amdgpu" ]; # to load the amdgpu kernel module
 Add the following lines to your NixOS hardware configuration, by default it should be at ``/etc/nixos/hardware-configuration.nix``
 
 ```
-boot.initrd.kernelModules = [ "nvidia" ]; 
+boot.initrd.kernelModules = [ "nvidia" ];
 boot.blacklistedKernelModules = ["nouveau"];
 ```
 Add the following lines to your NixOS configuration, by default it should be at ``/etc/nixos/configuration.nix`` (customize as you prefer)
@@ -200,9 +167,9 @@ Add the following lines to your NixOS configuration, by default it should be at 
     powerManagement.finegrained = false;
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     # Do not disable this unless your GPU is unsupported or if you have a good reason to.
     open = true;
@@ -256,7 +223,7 @@ And to verify if you have OpenGL properly set up, you can install ``clinfo``.
 
 For additional troubleshooting steps, [you can refer to the NixOS wiki](https://nixos.wiki/wiki)
 
-Links: 
+Links:
 [AMD](https://nixos.wiki/wiki/AMD_GPU);
 [NVIDIA](https://nixos.wiki/wiki/Nvidia);
 [Intel](https://nixos.wiki/wiki/Intel_Graphics);
