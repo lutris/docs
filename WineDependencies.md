@@ -28,7 +28,7 @@ Upgrade your system:
 
     sudo pacman -Syu 
 
-Execute the following command:
+Execute the following commands:
 
 ```
 sudo pacman -S wine-staging
