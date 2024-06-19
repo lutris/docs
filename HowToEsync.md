@@ -26,6 +26,10 @@ Change `username` to your actual username. Once the file is edited, reboot for t
 
 >      username hard nofile 524288
 
+If the limits are not changed after a reboot, PAM may need to be configured to read the limits configuration in `/etc/security`. This needs to be done on Void Linux. Edit the file in the directory `/etc/pam.d` that corresponds to the login manager you use. If using `lightdm`, for example, edit file `/etc/pam.d/lightdm`. If logging in from a tty, edit `/etc/pam.d/login`. Add the following line to the end of the file:
+
+>      session required pam_limits.so
+
 **Using Esync Wine builds**
 
 Esync is enabled by default starting with Lutris 0.5.9 and all presently available Lutris Wine versions include Esync.
