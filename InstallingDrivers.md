@@ -1,6 +1,23 @@
-﻿
 **NOTE:** The information in this page is NOT endorsed by the Lutris development team. It is entirely written by the community.
 
+# Installing Drivers
+
+## Debian (incomplete guide)
+
+### NVIDIA:
+
+You will need the latest NVIDIA drivers and also the libvulkan1 package.  It's also not a bad idea to add the i386 architecture.
+
+You can do all of that with the following command:
+
+```bash
+sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install nvidia-driver libvulkan1 libvulkan1:i386
+```
+
+Reboot to apply changes.
+
+_**Warning**: Please ensure your graphics card is supported by the 515 driver before installing._
+_For a list of supported GPUs click here: https://www.nvidia.com/Download/driverResults.aspx/186156/en-us_
 
 ## Ubuntu / KDE Neon / Other Ubuntu derivatives
 
@@ -227,4 +244,3 @@ Links:
 [AMD](https://nixos.wiki/wiki/AMD_GPU);
 [NVIDIA](https://nixos.wiki/wiki/Nvidia);
 [Intel](https://nixos.wiki/wiki/Intel_Graphics);
-
