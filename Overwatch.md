@@ -22,7 +22,7 @@ Blizzard Battle.Net will be installed when you run the Lutris Installer for Over
 
 - The stuttering may persist/reappear if you play with settings higher than Low or there was a release of new content. Just spectate your friends/play a bit and it will disappear.
 
-- Highlights won't save (results in error). Previously you could work around this by manually selecting WEBM as a format, but that results in ~600KB corrupted files at this point. There is currently no known solution to saving videos in Overwatch on Linux.
+- Highlights won't save (results in error) under some circumstances. The only way to get it working is by manually selecting WEBM as the format and then leaving it be until it is done. If you switch focus to another program via ALT+TAB or anything else it will result in an error as well.
 
 - If starting from Blizzard App crashes the game/you only see a black screen for quite a while now, you need to disable Streaming feature in Blizzard App
 
