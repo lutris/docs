@@ -58,6 +58,12 @@ For a more minimal experience:
 
     sudo dnf install wine-core wine-core.i686
 
+## Void
+
+Execute the following command:
+
+    sudo xbps-install -Su wine winetricks wine-32bit
+
 ## Other distributions
 
 To install Wine on other distributions, consult the [WineHQ Download](https://wiki.winehq.org/Download) page for more information.
