@@ -198,22 +198,22 @@ For most users, the first option will be fine, but if you have a very old nvidia
 To enable OpenGL and Vulkan, you can add the following lines to your NixOS configuration, the file is located at ``/etc/nixos/configuration.nix`` by default.
 
 ```
-hardware.opengl.driSupport = true;
+
+hardware.graphics.enable = true;  # Before 24.11: hardware.opengl.driSupport
 # For 32 bit applications
-hardware.opengl.driSupport32Bit = true;
-hardware.opengl.extraPackages = with pkgs; [
-  rocm-opencl-icd
-  rocm-opencl-runtime
+hardware.graphics.enable32Bit = true;  # Before 24.11: hardware.opengl.driSupport32Bit
+hardware.graphics.extraPackages = with pkgs; [
+  rocmPackages.clr
 ];
 ```
 
 amdvlk is not recommended but on older AMD hardware, it can be helpful, so to use amdvlk add the following lines to your configuration instead.
 
 ```
-hardware.opengl.driSupport = true;
+hardware.graphics.enable = true;
 # For 32 bit applications
-hardware.opengl.driSupport32Bit = true;
-hardware.opengl.extraPackages = with pkgs; [
+hardware.graphics.enable32Bit = true;
+hardware.graphics.extraPackages = with pkgs; [
   amdvlk
 ];
 ```
