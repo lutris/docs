@@ -187,6 +187,7 @@ hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable
 hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta
 hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production (installs 535)
 hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta
+hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_470
 hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_390
 hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_340
 ```
