@@ -23,3 +23,12 @@ One effective workaround is to use a Flatpak terminal to launch the game. We rec
    ![image](https://github.com/user-attachments/assets/8cee160b-875b-4565-b07b-83ad41afe382)
 
 6. Click **Save**, and your game should now launch successfully.
+
+<!--
+(Not sure about this part)
+# Info about game folders
+
+Your game might not launch if its in a folder that contains a space,comma,exclamation mark, and stuff of that nature.
+/mnt/8073657c-f7f3-4c5d-bb7e-48e43b904ec0/Games/Alien/run.sh ✅
+/mnt/8073657c-f7f3-4c5d-bb7e-48e43b904ec0/Games/Alien/Alien - Isolation Collection/run.sh ❌
+-->
