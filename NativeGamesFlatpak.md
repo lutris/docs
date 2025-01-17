@@ -16,7 +16,7 @@ One effective workaround is to use a Flatpak terminal to launch the game. We rec
 
 4. In the **Arguments** field, input `-e` followed by the path to the game’s launch script.
 
-(If you want the konsole window to stay after you're done playing the game add the `--keep` arguement before `-e`)
+(If you want the konsole window to stay after you're done playing the game add the `--hold` arguement before `-e`)
 
    For example, the launch script in my case looks like this:
 
