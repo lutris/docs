@@ -6,7 +6,7 @@ When attempting to run native Linux games through Flatpak, you may encounter iss
 
 One effective workaround is to use a Flatpak terminal to launch the game. We recommend using [Konsole](https://flathub.org/apps/org.kde.konsole), as it offers a simple and straightforward solution.
 
-### Steps to Implement:
+### Steps to follow:
 
 1. Install Konsole as a Flatpak application.
 2. Add Konsole as a game in Lutris.
