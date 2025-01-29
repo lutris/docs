@@ -83,6 +83,23 @@ To install support for Vulkan API  (will be functional only if you have a [Vulka
 
 _Note for Intel integrated graphics users: Only Skylake and newer Intel CPUs (processors) offer full Vulkan support. Broadwell, Haswell and Ivy Bridge only offer partial support, which will very likely not work with a lot of games properly. Sandy Bridge and older lack any Vulkan support whatsoever._
 
+## Fedora
+
+### AMD
+
+Usually, if you have an AMD GPU running with open source drivers (Mesa), the required packages should already be installed.
+If for some reason they aren't, run the following command:
+
+    sudo dnf install libdrm libdrm.i686 vulkan-loader vulkan-loader.i686 vulkan-tools
+
+### Intel
+
+    sudo dnf install kernel-firmware libdrm libdrm-intel vulkan-tools vulkan-loader vulkan-tools-devel
+
+### NVIDIA
+
+Still in progress!!!
+
 ## openSUSE Tumbleweed
 
 *Notice:* openSUSE Leap releases are currently not officaly supported because they ship an older version of glibc (2.26 but 2.27 is required at least).
