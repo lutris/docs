@@ -58,6 +58,20 @@ For a more minimal experience:
 
     sudo dnf install wine-core wine-core.i686
 
+## OpenSUSE Tumbleweed
+
+> *Notice:* openSUSE Leap releases are currently not officaly supported because they ship an older version of glibc (2.26 but 2.27 is required at least).
+
+The recommended package for gaming with lutris is `wine-staging`, and it includes: 
+- `winetricks`
+- `wine-mono`
+- `wine-staging-32bit`
+- `wine-gecko`
+
+You can do so by executing the following command:
+
+```sudo zypper in wine-staging```
+
 ## Other distributions
 
 To install Wine on other distributions, consult the [WineHQ Download](https://wiki.winehq.org/Download) page for more information.
