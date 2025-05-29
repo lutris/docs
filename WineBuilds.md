@@ -1,4 +1,4 @@
-# Proton Version Management
+# Wine Version Management
 
 Lutris uses the deprecated [Wine-GE-8-26](https://github.com/GloriousEggroll/wine-ge-custom) as the default Wine build. 
 
