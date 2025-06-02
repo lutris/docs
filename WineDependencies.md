@@ -1,1 +1,1 @@
-Just set your default wine versio to ge-proton
+Just set your default wine version to ge-proton
