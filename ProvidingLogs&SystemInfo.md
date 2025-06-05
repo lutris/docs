@@ -25,14 +25,14 @@ Run your game until you encounter your issue. This generates a log which helps u
 
 Logs can be found by clicking the log button on the right sidebar:
 
-![](https://i.imgur.com/4SBUFqy.png)
-![](https://i.imgur.com/oU1dUHx.png)
+![](/assets/5.png)
+![](/assets/6.png)
 
 ### Wine debugging output
 
 Debugging output for Wine is disabled by default. This is to limit the amount of spam for a smoother gaming experience. You must enable output manually for Wine and Wine Steam games. If not, the log produced will be incomplete and provide little to no information.
 
-![](https://i.imgur.com/f459PpS.gif)
+![](/assets/debug.gif)
 
 ## Common Issues
 
@@ -90,7 +90,7 @@ Issue:
 Issue:
 
 <p align="center">
-  <img src="https://i.imgur.com/gpGpU4t.png">
+  <img src="/assets/7.png">
 </p>
 
 **Solution:** This happens whenever a prefix that has .NET installed is updated. It's safe to ignore.

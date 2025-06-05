@@ -19,7 +19,7 @@ And if it's **64-bit**, you will get this instead:
 
 * Open `winecfg` and add a `native,builtin` override for `d3d9`, `d3d11` and `dxgi.dll`. Here's a GIF that showcases the process:
 
-![Peek 2020-04-09 17-32](https://user-images.githubusercontent.com/10602045/78906537-29951b00-7a88-11ea-8142-3681f1ba8af0.gif)
+![](/assets/1.gif)
 
 * Download prebuilt apitrace files:
 
