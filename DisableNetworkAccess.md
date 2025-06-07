@@ -2,7 +2,23 @@
 
 ### There are several ways of doing this.
 
-# Approach 1: Blocking network access via a firewall (Recommended)
+# Approach 1: Blocking network access via `flatpak-spawn`
+
+This works only with the flatpak package
+
+1. Right click your game and press `Configure`
+
+2. Go to `System options` 
+
+3. Scroll down and add the following as a `Command prefix` to your game
+
+`flatpak-spawn --no-network`
+
+![](/assets/flatpak-spawn.png)
+
+# Approach 2: Blocking network access via a firewall (Recommended)
+
+This works with all lutris packages
 
 1. Install `opensnitch` (or a firewall like that) for your distribution (e.g. `sudo pacman -S opensnitch`)
 
@@ -18,7 +34,7 @@
 
 6. Click `Save`
 
-# Approach 2: Using the native package with firejail
+# Approach 3: Using the native package with firejail
 
 This only works with native lutris packages
 
