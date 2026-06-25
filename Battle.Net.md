@@ -14,6 +14,21 @@ Battle.net requires up-to-date, Vulkan capable graphics drivers.
 For instructions on how to install them, refer to [How to: Installing Drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md).<br>
 Otherwise, Battle.Net **may not work**.
 
+## AMD/Mesa Users — Recommended Installer
+
+If you are on an AMD GPU with Mesa/RADV drivers (most common on Arch, Fedora, Pop!\_OS, and Ubuntu-based distros), use the **AMD (Wine Staging)** installer variant when installing Battle.net through Lutris. This installer:
+
+- Pins a known-working **Wine Staging** build (vanilla Wine and GE-Proton have known issues with the Battle.net login flow on AMD/Mesa systems)
+- Disables the `locationapi` DLL, which causes a crash on the login screen under Mesa
+- Sets the DXVA2 backend to VA-API for AMD hardware video decode
+- Disables hardware acceleration in the Battle.net client (required to avoid a blank login screen)
+- Configures the DXVK shader cache and Wine Staging shared memory flags
+
+The installer YAML and full configuration details are available at:
+https://github.com/ghostrunner42/battlenet-lutris-amd
+
+If the AMD installer variant is not yet available in Lutris, you can apply these settings manually after installation — see the troubleshooting section below.
+
 ##  Known issues and troubleshooting
 Bugs, misconfigured systems and missing dependencies can sometimes cause issues with Battle.Net:
 
@@ -39,13 +54,24 @@ Also may be caused by not rebooting after installing drivers.
 If the message appears when DXVK is in use, and it works with DXVK disabled, make sure you installed Vulkan correctly, including 32 bit packages.
 If the issue persists, try removing Lutris's DXVK catalog in `.local/share/lutris/runtime/dxvk` (.local is a hidden folder inside your `Home` directory).
 
-### Spinning Icon, no login buttons
-Go to options for Battle.Net - disable hardware acceleration.
+### Spinning Icon, no login buttons / blank login screen
+Go to Battle.Net options and disable hardware acceleration.
 
 You might also have success if you try [deleting the app's cache directory](https://us.battle.net/support/en/article/34721), which will be in the wine prefix's `drive_c/ProgramData/` directory.
 
+**AMD/Mesa users:** If disabling hardware acceleration alone does not resolve the issue, add a Wine DLL override for `locationapi` and set it to **disabled**. This is a known cause of the login screen failing to render under Mesa. To apply it:
+
+1. In Lutris, right-click Battle.net → Configure → Runner Options
+2. Under **DLL Overrides**, add `locationapi` with value `d` (disabled)
+3. Restart Battle.net
+
+Alternatively, set it via the terminal:
+```bash
+env WINEPREFIX=/path/to/your/battlenet/prefix wine reg add "HKCU\Software\Wine\DllOverrides" /v locationapi /t REG_SZ /d "" /f
+```
+
 ### Black screen when starting game
-Go to options for Battle.Net- disable streaming
+Go to options for Battle.Net — disable streaming.
 
 ### Sleeping Agent / issues with installing / updating :
 <details>
@@ -64,7 +90,7 @@ Blizzard Agent went to sleep:
 <br>
 
 Here is what you can try:
-1. Use wine version 3.20 or newer.
+1. Use wine version 3.20 or newer. **Wine Staging is recommended** — vanilla Wine has known compatibility issues with the Battle.net login flow, particularly on AMD/Mesa systems.
 2. Close Battle.Net fully and wait a bit until all its processes exit. But just in case, terminate Battle.Net, Agent.exe and wineserver with: 
 
 `killall Agent.exe Battle.net.exe wineserver` 
